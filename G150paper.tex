@@ -1,0 +1,217 @@
+%\documentclass[preprint,12pt]{aastex}
+\documentclass[preprint2]{aastex}
+%\documentclass[iop]{emulateapj}
+%\usepackage{subfigure}
+\usepackage{natbib}
+%not sure I really need these
+\usepackage{calrsfs,euscript,mathrsfs,amssymb}
+\usepackage{graphicx}
+\graphicspath{ {Figures/} }
+
+
+%not sure what this does
+%\usepackage[nomarkers,nolists]{endfloat}
+
+%\usepackage{lineno}
+\usepackage[pagewise, mathlines]{lineno}
+\linenumbers
+
+%Jamie added this to have inline colored comments
+\newcount\Comments  % 0 suppresses notes to selves in text
+\Comments=0   % TODO: set to 0 for final version
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{purple}{rgb}{1,0,1}
+\definecolor{darkpurple}{rgb}{0.5,0,0.5}
+\definecolor{lightgreen}{RGB}{135,220,0}
+
+% \kibitz{color}{comment} inserts a colored comment in the text
+\newcommand{\kibitz}[2]{\ifnum\Comments=1\textcolor{#1}{#2}\fi}
+% add yourself here: 
+\newcommand{\jamie}[1]{\kibitz{red}      {[JAM: #1]}}
+
+\newcommand{\myemail}{jcohen@astro.umd.edu}
+\newcommand{\HI}{\ion{H}{1}}
+\newcommand{\mH}{H$_2$}
+\newcommand{\Msun}{$M_\odot$}
+\newcommand{\gam}{$\gamma$-ray}
+%\newcommand{\lat}{\textit{Fermi}-LAT }
+\newcommand{\g}{$\gamma$}
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand{\kms}{km s$^{-1}$}
+\newcommand{\msol}{\hbox{$M_\odot$}}            % Solar mass
+\newcommand{\Fermi}{\emph{Fermi }}  % Fermi
+\newcommand{\FermiLat}{\emph{Fermi} LAT }     %Fermi LAT
+\newcommand{\ptlike}{{\tt pointlike}}
+\newcommand{\gtlike}{{\tt gtlike}}
+\newcommand{\Gone}{G150.3+4.5}
+
+
+
+\shorttitle{G150.3+4.5 GeV paper}
+\shortauthors{Cohen, Hays, Hewitt }
+\slugcomment{}
+% can play with these things to change the margins
+%\setlength\topmargin{0in}
+%\setlength\headheight{0in}
+%\setlength\headsep{0in}
+%\setlength\textheight{9in}
+%\setlength\textwidth{6.5in}
+%\pagestyle{empty}
+%\setlength\oddsidemargin{0.5in}
+%\setlength\evensidemargin{0.5in}
+%\setlength\headheight{77pt}
+%\setlength\headsep{0.5in}
+\begin{document}
+%\begin{doublespace}
+
+\title{\Gone~YEAH! }
+\author{Jamie M. Cohen, Elizabeth Hays, John W. Hewitt}
+
+%maybe don't need this
+%\input{authorlist.tex}
+
+\begin{abstract}
+
+We report here a dedicated analysis of the \gam~emission around supernova remnant (SNR) \Gone, observed with the Large Area Telescope (LAT) on board the \textit{Fermi Gamma-Ray Space Telescope}. The Second Catalog of Hard \FermiLat Sources \citep[2FHL,][]{2FHL} reported detection of a hard spectrum, spatially extended source from 50 GeV - 2TeV, partially overlapping  \Gone. We extend the energy threshold to 750 MeV  for spectral analysis and x GeV for morphological analysis, we significantly detect a large ($\sigma = 1.46^{\circ} \pm 0.03^{\circ}$) extended \gam~source consistent with the entirety of the radio shell, \jamie{if we test other models quick then we can say morphology} and with a power law spectral index of 1.88.  \jamie{all these numbers need to be double checked with new analysis}
+An obtained HI spectrum toward the SNR suggests that the remnant could be one of the closest to us and estimates of its age indicate that \Gone ~may be in the Sedov-Taylor phase.  In contrast, the spectrum of the \gam~source is more akin to that of a young, leptonic dominated SNR, although ROSAT X-ray observations show no signs of nonthermal emission coincident typically observed in young SNRs. We discuss alternate origin scenarios for the \gam~emission...
+ \jamie{make the statements more definitive sounding once we've explored more possibilities. Should I have the words Pass 8 here somewhere, make it all shorter? move the on board stuff to intro}
+
+\end{abstract}
+
+%\keywords{catalogs -- gamma rays: general}
+\keywords{Supernova Remnants, \g-rays, Cosmic rays, Radio}
+
+%do I need maketitle here? 
+%\maketitle
+%\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%         Introduction 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction} 
+
+
+%\citep{2013ApJS..208...17A} testing bib
+
+Something about SNRs, cosmic ray accelerators, radio detections, connection between radio-LAT observations, G150 detection, 2FHL blind detection and SNRs at TeV (all young?), this paper extends the energy down to $>$ 5 GeV
+
+We describe the LAT and analysis results in $\S$\ref{sec:LATobs}, detail multiwavelength observations in $\S$\ref{sec:Multiwave}, and discuss various emission origin scenarios in $\S$\ref{sec:Discuss}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%         FermiLat  Observations and  Analysis 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\label{sec:LATobs}\FermiLat  Observations and  Analysis }
+\subsection{\label{sec:LATdata}Data Set and Reduction}
+\FermiLat is a pair conversion telescope sensitive to high energy \gam s  from 20 MeV to greater than 300 GeV \citep{atwood09}.\jamie{it's weird to say  300 GeV when 2FHL goes up to 2 TeV, 1FHL to 500 GeV?} We analyzed 7 years of Pass 8 data, from date1 to date2. The  Pass 8 event reconstruction provides a greatly improved angular resolution and acceptance \citep{atwood13b,atwood13}.\jamie{why no PSF types? can I quickly use fermipy to do extended analysis of G150 with PSF types? what does it add here? there's not much confusion at this energy since we're so far off the plane, but maybe it would help push us to lower energies?} Source class events were analyzed within a 10$^{\circ}$ region of interest (RoI) \jamie{check this}centered on \Gone~using the P8R2\_SOURCE\_V6 instrument response functions, with a pixel size of 0.1$^{\circ}$. To reduce contamination from earth limb \gam s, only events with a zenith angle less than 100$^{\circ}$ \jamie{check this}were included. 
+
+For spectral and spatial analysis we utilized both the standard \Fermi Science Tools (version 10-01-01?)\footnote[1]{http://fermi.gsfc.nasa.gov/ssc/}, and the binned maximum likelihood package \ptlike~\citep{Kerr10}. \ptlike~provides methods for simultaneously fitting the spectrum, position, and extension of a source, and were extensively validated in \cite{Lande12}. Both packages fit a source model to data, the Galactic diffuse emission, and an isotropic component which accounts for the background of misclassified charged particles and the extragalactic diffuse \gam background\footnote[2]{See http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html for details on LAT Pass8 bakground models}.
+
+In our source model for the region, we included sources from the third \FermiLat catalog \citep[3FGL]{3FGL} within 15$^\circ$ of the center of our RoI \jamie{pulsars from here or 2pc?}. The normalization and spectral index of sources within 5$^{\circ}$ of the center of the RoI were free to vary, whereas all other source parameters were fixed. Sources with a likelihood test statistic (TS) $<$ 9 were removed from the model.  TS is defined as, ${\rm TS}=2(\ln \mathcal{L}_1 - \ln \mathcal{L}_0)$ where $\mathcal{L}_1$ is the likelihood of source plus background and  $\mathcal{L}_0$ that of just the background.
+
+\jamie{energy/spatial  binning, descirbe why we made this energy selection (I'm not sure why above 5 Gev, but not below 1 GeV because the PSF gets very broad and diffuse contamination is higher), gtmktime to select time intervals when the LAT was in prime observing mode. Sources included in the model, and souces not, sources free in the model sources not, what is the 1(5) GeV on-axis 68\% containment angle?}
+
+\subsection{\label{sec:LATmorph}Morphological Analysis}
+\jamie{I think we should go lower, and can go lower with fermipy and different PSF types}
+Studying the spatial extension of sources with the LAT is non-trivial due to the energy-dependent point spread function (PSF) and strong diffuse emission present in the Galactic plane. To strike a balance between the best angular resolution and minimal diffuse contamination, we restrict our analysis to energies between 5 GeV - 500 GeV. We divide this energy range into x logarithmically spaced bins for both \ptlike~and \gtlike~binned likelihood analyses.
+
+Three  3FGL sources are located within the extent of \Gone. 3FGL J0425.8+5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum with index $\Gamma = 2.35\pm 0.17$, and TS = x in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0426.7+5437 has TS = x in 3FGL and exhibits a pulsar-like spectrum, yet it's located about 0.8$^{\circ}$, from the center of the SNR (we discuss in the potential emission scenarios in $\S$\ref{sec:Dist}). Finally,  3FGL J0423.5+5442, exhibits a power law spectral index, $\Gamma = 2.63\pm 0.15$, and TS = x, with no clear multiwavelength source association.
+
+In our analysis, we removed the three 3FGL sources and replaced them with a radially symmetric uniform disk of initial radius $\sigma = 1.5^{\circ}$\jamie{ check this. fill in more if we test more models}
+
+Other analysis to do? Split remnant in half? Motivation: Radio from \citep{Gao14} Fig \ref{fig:GaoRad} has a void in the center which is an argument for trying a ring template, but there's also radio peak in the SE, so maybe that could be the splot? No good template since radio is so faint? Fig \ref{fig:10gevResidCmap} Shows a background subtracted residual counts map, not quite disk-like. Figs below are just for show now
+
+Should try an ellipse since the Radio source is elliptical
+
+%%%%These are temporary
+%put file name in {} to get it to compile with dots in the name!
+%for png, have to use pdfchain
+\begin{figure}[!ht]
+	\begin{centering}
+		\includegraphics[width=\columnwidth]{{ES_4_Region_l150.0_b0.0_sources}.png}
+		\caption{Smoothed diffuse and isotropic subtracted counts map, E  $>$ 10 GeV.
+			\label{fig:10gevResidCmap}}
+	\end{centering}
+\end{figure}
+
+\begin{figure}[!ht]
+	\begin{centering}
+		\includegraphics[width=\columnwidth]{Figures/G150_GaoHan.png}
+		\caption{Radio image from \citep{Gao14}
+			\label{fig:GaoRad}}
+	\end{centering}
+\end{figure}
+
+\subsection{\label{sec:LATspec}Spectral Analysis}
+Describe gtlike  results, spectral models tested (broken PL? no need to since it looks so power law esque?). No break observed, hard spectra increasing to TeV
+
+how many energy bins
+\subsection{\label{sec:LATsys}Systematics}
+Bracketing IRFs and diffuse systematics study still need to be done
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%         Multiwavelength  Observations and  Analysis 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\label{sec:Multiwave}Multiwavelength  Observations and  Analysis }
+Not sure yet if I'll need separate sections
+\subsection{\label{sec:Radio}Radio}
+I don't think we're presenting any new Radio analysis, just rehashing previous results, showing radio maps overlaid on GeV, so maybe this is really discussion.
+\citep{Gao14}
+\subsection{\label{sec:HI}HI}
+\subsection{\label{sec:CO}CO}
+Make CO overlay maps for the possible velocities. Only issue is that Dame 2001 only goes up to 5 deg. Other CO data that covers better to use? Planck?
+\subsection{\label{sec:Xray}X-ray}
+No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near the center? Should a pulsar be near the center? How to quantify this? Can we place a limit on something like density with an upper limit on X-ray emission? What about other x-ray telescopes?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%         Discussion and Results
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\label{sec:Discuss}Discussion and Results}
+\subsection{\label{sec:What}What is it?}
+Size + HI suggest that near distance corresponding to different HI velocities suggest it's aged, spectrum looks more like young SNR (hard + no GeV break ). Is it a weird young remnant or weird aged one? Leptonic dominated if young, hadronic dominated if older? Something about nearby dense clouds masking hadronic emission? Maybe this is only true for MeV cosmic rays that are screened out though and it would only mask the pion bump, but not this higher energy emission?
+
+PWN or SNR. Can we rule out PWN? See W41 paper, MSH 11-61A, Fabios recent G326 work (no, he just tries to use the PSF types and testing different model templates to try to disentangle SNR from PWN)?
+
+No PSR candidate near center (should it be near the center? Depends on age)
+Is there some limit we can place on the PWN based on not seeing the pulsar? Like on Edot? OR something like Mattana et al. 2009 correlation between  $\mathrm{flux_x / flux_g \propto}$   Edot? 
+
+Assume it's in Sedov phase based on size + near distance, and calculate age, upper limit on Edot base on lack of x-ray flux? Or maybe if I assume the sources is the PWN and GeV radius is PWN radius, then can I estimate Edot based on size and evolution inside  SNR?
+
+If we assume close distance, age is only $\approx$ 5kyr, maybe this is a transitional SNR? What do others like this look like? Puppis A? Gamma Cygni is a similar age too.something 
+
+
+\subsection{\label{sec:Dist}Distance Considerations}
+probably doesn't need to be a different section. 
+\subsection{\label{secModel}Nonthermal Modeling}
+I think I could get a working model with naima running pretty quickly, is it worth it?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%         Conclusion
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\label{sec:Conc}Conclusions}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`%%%%%%
+%
+%         bib
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{apj}
+\bibliography{biblio.bib}
+%\bibliography{test.bib}
+
+%\end{doublespace}
+
+\end{document}
