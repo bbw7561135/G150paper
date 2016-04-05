@@ -111,11 +111,11 @@ We describe the LAT and analysis results in $\S$\ref{sec:LATobs}, detail multiwa
 \subsection{\label{sec:LATdata}Data Set and Reduction}
 \FermiLat is a pair conversion telescope sensitive to high energy \gam s  from 20 MeV to greater than 1 TeV \citep{2FHL}, operating primarily in a sky-survey mode which views  the entire sky every 3 hours. The LAT has wide field of view ($\sim$2.4 sr), a large effective area of $\sim$8200 cm$^2$ above 1 GeV for on axis events and a  68\% containment radius angular resolution  of $\sim$0.8$^\circ$  at 1 GeV. For further details  on the instrument and its performance see \cite{atwood09} and \cite{lat_perf}.
 
-In this analysis, we  analyzed 7 years of Pass 8 data, from August 2nd 2008  to August 2nd 2015. The Pass 8 event reconstruction provides a significantly improved angular resolution \jamie{this is sadly unimportant unless I'm at higher energy or using the PSF types. The P8 total PSF at 1 GeV is about the same as for P7REP. It's the acceptance/effective area that are considerably better at this energy}, acceptance, and background event rejection \citep{atwood13b,atwood13}, all of which lead to an increase in the effective energy range and sensitivity of the LAT. Source class events were analyzed within a 14$^\circ$x14$^\circ$ region centered on SNR \Gone~using the P8R2\_SOURCE\_V6 instrument response functions, with a pixel size of 0.1$^{\circ}$. To reduce contamination from earth limb \gam s, only events with a zenith angle less than 100$^{\circ}$ were included.
+In this analysis, we  analyzed 7 years of Pass 8 data, from August 2nd 2008  to August 2nd 2015. The Pass 8 event reconstruction provides a significantly improved angular resolution \jamie{this is sadly unimportant unless I'm at higher energy or using the PSF types. The P8 total PSF at 1 GeV is about the same as for P7REP. It's the acceptance/effective area that are considerably better at this energy}, acceptance, and background event rejection \citep{atwood13b,atwood13}, all of which lead to an increase in the effective energy range and sensitivity of the LAT. Source class events were analyzed within a 14$^\circ$x14$^\circ$ region centered on SNR \Gone~using the P8R2\_SOURCE\_V6 instrument response functions, with a pixel size of 0.1$^{\circ}$. To reduce contamination from earth limb \gam s, only events with zenith angle less than 100$^{\circ}$ were included.
 
-For spectral and spatial analysis we utilized both the standard \Fermi Science Tools (version 10-01-01)\footnote[1]{\url{http://fermi.gsfc.nasa.gov/ssc/}} , and the binned maximum likelihood package \ptlike~\citep{Kerr10}. \ptlike~provides methods for simultaneously fitting the spectrum, position, and spatial extension of a source, and  was extensively validated in \cite{Lande12}. Both packages fit a source model, the Galactic diffuse emission, and an isotropic component (which accounts for the background of misclassified charged particles and the extragalactic diffuse \gam background)\footnote[2]{\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html}} to the observations.  In this analysis, we used the standard Galactic diffuse ring-hybrid model, scaled  for Pass 8 analysis, gll{\_}iem{\_}v06.fits, and for the isotropic emission,  we used iso{\_}P8R2{\_}SOURCE{\_}V6{\_}v06.txt, extrapolated to 2 TeV as in \cite{2FHL}.
+For spectral and spatial analysis we utilized both the standard \Fermi Science Tools (version 10-01-01)\footnote[1]{\url{http://fermi.gsfc.nasa.gov/ssc/}} , and the binned maximum likelihood package \ptlike~\citep{Kerr10}. \ptlike~provides methods for simultaneously fitting the spectrum, position, and spatial extension of a source, and was extensively validated in \cite{Lande12}. Both packages fit a source model, the Galactic diffuse emission, and an isotropic component (which accounts for the background of misclassified charged particles and the extragalactic diffuse \gam~ background)\footnote[2]{\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html}} to the observations. In this analysis, we used the standard Galactic diffuse ring-hybrid model scaled for Pass 8 analysis, gll{\_}iem{\_}v06.fits (modulated by a power law function with free index and normalization), and for the isotropic emission,  we used iso{\_}P8R2{\_}SOURCE{\_}V6{\_}v06.txt, extrapolated to 2 TeV as in \cite{2FHL}.
 
-In our source model for the region, we included sources from the third \FermiLat catalog \citep[3FGL]{3FGL} within 15$^\circ$ of the center of our region of interest (RoI). We replaced the position and spectrum of any 3FGL pulsars in the region with their corresponding counterpart  from the LAT 2nd pulsar catalog \citep{2PC}.  Residual emission unaccounted for by 3FGL sources is present in the RoI due to the increased time range and different energy selection with respect to that in 3FGL. We added to the RoI several point sources to account for this unmodeled emission and minimize the global residuals.\jamie{do I need to say more about these sources? should I mention adding them automatially and iteraively based on TS maps and reference SNRcat/2FHL? How close is the closest source? Mention this and use as an argument for not saying much more about them}.  The normalization and spectral index of sources within 5$^{\circ}$ of the center of the RoI were free to vary, whereas all other source parameters were fixed. A preliminary likelihood fit of the RoI was performed, and  sources with a test statistic (TS) $<$ 9 (TS is defined as,  ${\rm TS}=2~{\rm Log}(\mathcal{L}_1 / \mathcal{L}_0)$ where $\mathcal{L}_1$ 
+In our source model for the region, we included sources from the third \FermiLat catalog \citep[3FGL]{3FGL} within 15$^\circ$ of the center of our region of interest (RoI). We replaced the position and spectrum of any 3FGL pulsars in the region with their corresponding counterpart  from the LAT 2nd pulsar catalog \citep{2PC}.  Residual emission unaccounted for by 3FGL sources is present in the RoI due to the increased time range and different energy selection with respect to that in 3FGL. We added to the RoI several point sources to account for this unmodeled emission and minimize the global residuals.\jamie{do I need to say more about these sources? should I mention adding them automatially and iteraively based on TS maps and reference SNRcat/2FHL? How close is the closest source? Mention this and use as an argument for not saying much more about them}.  The normalization and spectral index of sources within 5$^{\circ}$ of the center of the RoI were free to vary, whereas all other source parameters were fixed. A preliminary maximum likelihood fit of the RoI was performed, and  sources with a test statistic (TS) $<$ 9 (TS is defined as,  ${\rm TS}=2~{\rm Log}(\mathcal{L}_1 / \mathcal{L}_0)$ where $\mathcal{L}_1$ 
  is the likelihood of source plus background and  $\mathcal{L}_0$ that of just the background) were removed from the model. 
 
 \subsection{\label{sec:LATmorph}Morphological Analysis}
@@ -143,21 +143,38 @@ In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI,
 	\end{centering}
 \end{figure}
 
-We modeled the excess emission in the direction of \Gone ~with a uniform intensity radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model  via \ptlike. We extension of the disk with a seed radius of $\sigma$ = 0.1$^\circ$ and position centered on the radio position of \Gone. We define the significance of extension as in \cite{Lande12}; ${\rm TS_{ext} = 2~log(\mathcal{L}_{ext} / \mathcal{L}_{ps})}$, with $\mathcal{L}_{ext}$ being the likelihood of the model with the extended source and $\mathcal{L}_{ps}$ that with of a point source located at the peak of emission interior to the extended source \citep{Lande12}. For the disk model,  ${\rm TS_{ext} = 298}$, with a best fit radius, ${\rm \sigma = 1.40^\circ \pm 0.03^\circ}$ \jamie{I should just put this all in a table and reference it}, which is in very good agreement with the radio size of the SNR determined in \cite{Gao14}. An elliptical disk spatial model was tested as well, but the \jamie{did I compare just TS between the different spatial models or TSext}
+We modeled the excess emission in the direction of \Gone ~with a uniform intensity, radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model  via \ptlike. The extension of the disk was initialized with a seed radius of $\sigma$ = 0.1$^\circ$ and position centered on the radio position of \Gone. We define the significance of extension as in \cite{Lande12}; ${\rm TS_{ext} = 2~log(\mathcal{L}_{ext} / \mathcal{L}_{ps})}$, with $\mathcal{L}_{ext}$ being the likelihood of the model with the extended source and $\mathcal{L}_{ps}$ that with of a point source located at the peak of emission interior to the extended source. For the disk model,  ${\rm TS_{ext} = 298}$, with a best fit radius, ${\rm \sigma = 1.40^\circ \pm 0.03^\circ}$ \jamie{I should just put this all in a table and reference it}, which is in very good agreement with the radio size of the SNR determined in \cite{Gao14}. 
 
+The morphology of the radio emission is suggestive of an elliptical or ring morphology, so an elliptical disk and ring spatial model were tested as well. For the ring model, the fit reduced to a disk with parameters matching those stated above. Using the elliptical model showed a weak improvement over the radially symmetric model at the 2.6$\sigma$ level (${\rm \Delta TS = 9}$ with two additional degrees of freedom), which we did not consider significant enough to say the GeV emission had an elliptical morphology (see Table \ref{tab:LATres}). For the remainder of this study, we only considered the disk spatial model.\jamie{put Edisk in table too and reference i.}
 
+\jamie{more}
 
+Other things we tried
+
+fitting an extended source (starting with the 2FHL result) on top of the one currently there. Insignif
+
+another starting at the position of G149. Insignif
+
+Adding more point sources on top of the extended source. Insignif
+
+Say something about why we don't just go with the 3 3FGL sources. In the table I shouldn't just compare the 3 to the disk though because I also keep J0426 in the model. So the base comparison is really 2 sources vs the disk. Maybe it's enough to just say of course we keep the disk, we find one at GeV that matches really well with the radio. What did Josh's paper say about how modelling the spectrum of an intrisically extended source as point sources skews the PS spectrum to softer energies?
+
+He said, "Specifically, modeling a spatially extended source as point-like will systematically soften measured spectra", but idk if I get why. We see it with the 2 3FGL sources being softer than what the disk winds up being
+
+Another thing to point out is how modeling as point vs extended, if it's really extended can affect the fit of other point sources nearby, like J0426, so I should show the spectrum of this source too?  I fit both the norm and index of the source. 
 \input{Tables/latRes.tex}
-
-Fill in more about the TS of these sources at 1 GeV prior to removing them and adding in G150 as well as how they're insiginif when added on top of the extended source. Tried fitting and additional extended source that looks like the 2FHL ans this was insignif (I think this negates the need to try splitting the remnant). Different spatial models also not signif at 1 GeV. refit extension of G150 after adding in nearby sources. No templates since the radio we have is too weak.
 
 
 \subsection{\label{sec:LATspec}Spectral Analysis}
+After determining the best fit morphology with \ptlike~for the GeV emission coincident with SNR \Gone, we used those results as a starting point for our \gtlike~maximum likelihood fit of the region to estimate the best spectral parameters for our model. The LAT data 
+
+Best fit 
+
 Describe gtlike  results, spectral models tested (broken PL? no need to since it looks so power law esque?). No break observed, hard spectra increasing to TeV
 
 how many energy bins
-\subsection{\label{sec:LATsys}Systematics}
-Bracketing IRFs and diffuse systematics study still need to be done
+
+Systematics. Bracketing IRFs, alt iem, try varying the extension? still need to be done. Should probably just move this into the spectral  section
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,10 +189,10 @@ Not sure yet if I'll need separate sections
 I don't think we're presenting any new Radio analysis, just rehashing previous results, showing radio maps overlaid on GeV, so maybe this is really discussion.
 \citep{Gao14}
 \subsection{\label{sec:HI}HI}
-\subsection{\label{sec:CO}CO}
-Make CO overlay maps for the possible velocities. Only issue is that Dame 2001 only goes up to 5 deg. Other CO data that covers better to use? Planck?
+\subsection{\label{sec:CO}CO?}
+Make CO overlay maps for the possible velocities?
 \subsection{\label{sec:Xray}X-ray}
-No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near the center? Should a pulsar be near the center? How to quantify this? Can we place a limit on something like density with an upper limit on X-ray emission? What about other x-ray telescopes?
+No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near the center? Should a  pulsar even  be near the center? How to quantify this? Can we place a limit on something like density with an upper limit on X-ray emission? What about other x-ray telescopes?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
