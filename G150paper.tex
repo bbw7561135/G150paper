@@ -9,6 +9,7 @@
 \graphicspath{ {Figures/} }
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
+%\usepackage{deluxetable}
 
 %not sure what this does
 %\usepackage[nomarkers,nolists]{endfloat}
@@ -68,7 +69,7 @@
 
 \title{Fermi-LAT Observations of Extended Gamma-Ray Emission in the Direction of SNR G150.3+4.5}%Extended Gamma-Ray Emission in the Direction of \Gone~ }
 \author{Jamie M. Cohen, Elizabeth Hays, John W. Hewitt}
-
+%\email{\url{jcohen@astro.umd.edu}}
 %maybe don't need this
 %\input{authorlist.tex}
 
@@ -120,16 +121,16 @@ In our source model for the region, we included sources from the third \FermiLat
 \subsection{\label{sec:LATmorph}Morphological Analysis}
 Studying the spatial extension of sources with the LAT is non-trivial due to the energy-dependent point spread function (PSF) and strong diffuse emission present in the Galactic plane. To strike a balance between the best angular resolution and minimal diffuse contamination, we restrict our morphological analysis to energies between 1 GeV and  1 TeV. We divide this energy range into 12\jamie{4bpd} logarithmically spaced bins for both \ptlike~and \gtlike~binned likelihood analyses. 
 
-Three  3FGL sources are located within the extent of \Gone. 3FGL J0425.8+5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index $\Gamma = 2.35\pm 0.17$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, $\Gamma = 2.63\pm 0.15$, with no clear multiwavelength source association. Finally, 3FGL J0426.7+5437 has a pulsar-like spectrum, yet it is located about 0.8$^{\circ}$ from the center of the SNR. In a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. We discuss this source and potential emission scenarios further in $\S$\ref{sec:Dist}). 
+Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0425.8+ 5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index $\Gamma = 2.35\pm 0.17$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, $\Gamma = 2.63\pm 0.15$, with no clear multiwavelength source association. Finally, 3FGL J0426.7+5437 has a pulsar-like spectrum, yet in a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. The source is located about 0.8$^{\circ}$ from the center of the SNR. We discuss this source and potential association with \Gone  further in $\S$\ref{sec:Dist}). 
 
-In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI, but kept 3FGL J0426.7+5437 in the model since preliminary analyses showed clear positive residual emission at the position of the source if it was removed from the RoI. Figure \ref{fig:1GeV_resTSmap} shows a residual TS map for the region around \Gone. This point source detection-significance map was created by placing a point source modeled with a power law with photon index, $\Gamma$ = 2 at each pixel and gives the significance of detecting a point source at each location above the background. \jamie{add something somwhere about contamination with J0426 being another reason for restricting the energy range?}
+In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI, but kept 3FGL J0426.7+5437 in the model since preliminary analyses showed clear positive residual emission at the position of the source if it was removed from the RoI. Figure \ref{fig:1GeV_resTSmap} shows a residual TS map for the region around \Gone. This point source detection-significance map was created by placing a point source modeled with a power law of photon index, $\Gamma$ = 2 at each pixel and gives the significance of detecting a point source at each location above the background. \jamie{add something somwhere about contamination with J0426 being another reason for restricting the energy range?}
 
 %put file name in {} to get it to compile with dots in the name!
 %for png, have to use pdfchain
 \begin{figure}[!ht]
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{{G150_1GeV_resTsmap_radio_noLabs}.pdf}
-		\caption{Background subtracted residual TS map with 0.1$^\circ$x0.1$^\circ$ pixels for fixed index $\Gamma$ = 2 above 1 GeV, centered on SNR \Gone. The orange circle and shading show the fit radius and 1$\sigma$ errors for the extended source, the orange cross  shows the position of 3FGL J0426.7+5437 (included in the background model) and blue circle is the extent of the radio SNR. 
+		\caption{Background subtracted residual TS map above 1 GeV with 0.1$^\circ$x 0.1$^\circ$ pixels for fixed index $\Gamma$ = 2, centered on SNR \Gone. The orange circle and translucent shading show the fit disk radius and 1$\sigma$ errors, respectively, for the extended source, the orange cross shows the position of 3FGL J0426.7+5437 (included in the background model), and blue dashed circle is the extent of the radio SNR. 
 			\label{fig:1GeV_resTSmap}}
 	\end{centering}
 \end{figure}
@@ -142,7 +143,11 @@ In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI,
 	\end{centering}
 \end{figure}
 
-We modeled the excess emission in the direction of \Gone with a uniform intensity radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model model via \ptlike. We initialized the  extension with a seed radius, $\sigma$ = 0.1$^\circ$ and initial position centered on the radio position of \Gone. The significance of extension  \jamie{don't need a table for just disk hypothesis right? but maybe need to say something about the disk being a better model than 3 (or more) point sources (I think) I tried adding more sources on top of the 3FGL sources and there's no significant residual). where to say something about testing searching for point sources overlapping the extended source and trying to fit an extended source on top as well? in this table give the disk model with best spectral spatial params, TS, TSext  dof, LL, then the model with just the 3 3FGL sources (no disk) spectrum of each, TS, dof + LL ( didn't relocalize the se sources)}
+We modeled the excess emission in the direction of \Gone ~with a uniform intensity radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model  via \ptlike. We extension of the disk with a seed radius of $\sigma$ = 0.1$^\circ$ and position centered on the radio position of \Gone. We define the significance of extension as in \cite{Lande12}; ${\rm TS_{ext} = 2~log(\mathcal{L}_{ext} / \mathcal{L}_{ps})}$, with $\mathcal{L}_{ext}$ being the likelihood of the model with the extended source and $\mathcal{L}_{ps}$ that with of a point source located at the peak of emission interior to the extended source \citep{Lande12}. For the disk model,  ${\rm TS_{ext} = 298}$, with a best fit radius, ${\rm \sigma = 1.40^\circ \pm 0.03^\circ}$ \jamie{I should just put this all in a table and reference it}, which is in very good agreement with the radio size of the SNR determined in \cite{Gao14}. An elliptical disk spatial model was tested as well, but the \jamie{did I compare just TS between the different spatial models or TSext}
+
+
+
+\input{Tables/latRes.tex}
 
 Fill in more about the TS of these sources at 1 GeV prior to removing them and adding in G150 as well as how they're insiginif when added on top of the extended source. Tried fitting and additional extended source that looks like the 2FHL ans this was insignif (I think this negates the need to try splitting the remnant). Different spatial models also not signif at 1 GeV. refit extension of G150 after adding in nearby sources. No templates since the radio we have is too weak.
 
