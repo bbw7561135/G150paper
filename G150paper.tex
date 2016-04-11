@@ -76,7 +76,7 @@
 
 \begin{abstract}
 
-We report here a dedicated analysis of the \gam~emission around supernova remnant (SNR) \Gone, observed with the Large Area Telescope (LAT) on board the \textit{Fermi Gamma-Ray Space Telescope}. The Second Catalog of Hard \FermiLat Sources reported detection of a hard spectrum, spatially extended source from 50 GeV - 2TeV, partially overlapping  \Gone. Lowering the energy threshold to 1 GeV we significantly detect a large ($\sigma = 1.40^{\circ} \pm 0.03^{\circ}$) extended \gam~source consistent with the entirety of the radio shell and displaying a power law spectral index of 1.88.  \jamie{all these numbers need to be finalized with the gtlike analysis}
+We report here a dedicated analysis of the \gam~emission around supernova remnant (SNR) \Gone, observed with the Large Area Telescope (LAT) on board the \textit{Fermi Gamma-Ray Space Telescope}. The Second Catalog of Hard \FermiLat Sources reported detection of a hard spectrum, spatially extended source from 50 GeV - 2TeV, partially overlapping \Gone. Lowering the energy threshold to 1 GeV, we significantly detect a large ({\rm $\sigma = 1.40^{\circ} \pm 0.03^{\circ}$}) extended \gam~source consistent with the entirety of the radio shell and displaying a power law spectral index of ${\rm 1.80 \pm 0.04}$.  \jamie{all these numbers need to be finalized with the gtlike analysis}
 An obtained HI spectrum toward the SNR suggests that the remnant could be one of the closest to us and estimates of its age indicate that \Gone ~may be in the Sedov-Taylor phase \jamie{not sure about this, maybe distance is very uncertain, and hence age as well? My age estimate was $\sim$ 6kyr. Need to think about dynamically young vs. young, fast shocks like which SNR? does dynamically young say something more about the progenitor explosion or surrounding medium?}.  In contrast, the spectrum of the \gam~source is more akin to that of a young, leptonic dominated SNR, although ROSAT X-ray observations show no signs of nonthermal emission coincident typically observed in young SNRs. We discuss alternate origin scenarios for the \gam~emission...
  \jamie{ Should I have the words Pass 8 here somewhere, make it all shorter? move the on board stuff to intro. }
 
@@ -96,12 +96,12 @@ An obtained HI spectrum toward the SNR suggests that the remnant could be one of
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction} 
+Supernova remnants have long been thought to be the primary accelerators of cosmic rays up to the knee of the cosmic ray energy spectrum. 
 
-
-%\citep{2013ApJS..208...17A} testing bib
-
+what to say about radio SNRs? Connect CRs to nonthermal emission and the LAT and 
 Something about SNRs, cosmic ray accelerators, radio detections, connection between radio-LAT observations, G150 detection, 2FHL blind detection and SNRs at TeV (all young?), this paper extends the energy down to
 
+Focus more on the hadronic vs leptonic since that's what's interesting? 
 We describe the LAT and analysis results in $\S$\ref{sec:LATobs}, detail multiwavelength observations in $\S$\ref{sec:Multiwave}, and discuss various emission origin scenarios in $\S$\ref{sec:Discuss}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -131,18 +131,12 @@ In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI,
 \begin{figure}[!ht]
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{{G150_1GeV_resTsmap_radio_noLabs}.pdf}
-		\caption{Background subtracted residual TS map above 1 GeV with 0.1$^\circ$x 0.1$^\circ$ pixels for fixed index $\Gamma$ = 2, centered on SNR \Gone. The orange circle and translucent shading show the fit disk radius and 1$\sigma$ errors, respectively, for the extended source, the orange cross shows the position of 3FGL J0426.7+5437 (included in the background model), and blue dashed circle is the extent of the radio SNR. 
+		\includegraphics[width=\columnwidth]{{G150_1GeV_resTsmapNoG150_radio_noLabs}.pdf}
+		\caption{Background subtracted residual TS map above 1 GeV with 0.1$^\circ$x 0.1$^\circ$ pixels for fixed index $\Gamma$ = 2, centered on SNR \Gone. The orange circle and translucent shading show the fit disk radius and 1$\sigma$ errors, respectively, for the extended source, the orange cross shows the position of 3FGL J0426.7+5437 (included in the background model), and blue dashed circle is the extent of the radio SNR. Bottom includes \Gone in the background model, top does not.
 			\label{fig:1GeV_resTSmap}}
 	\end{centering}
 \end{figure}
 
-\begin{figure}[!ht]
-	\begin{centering}
-		\includegraphics[width=\columnwidth]{{G150_1GeV_resTsmapNoG150_radio_noLabs}.pdf}
-		\caption{Same as Figure \ref{fig:1GeV_resTSmap} but with disk in the background model \jamie{should this be a residual counts map instead?}
-			\label{fig:1GeV_resTSmap_noG150}}
-	\end{centering}
-\end{figure}
 
 %\begin{figure}[!ht]
 %	\begin{centering}
@@ -152,7 +146,7 @@ In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI,
 %	\end{centering}
 %\end{figure}
 
-We modeled the excess emission in the direction of \Gone ~with a uniform intensity, radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model  via \ptlike. The extension of the disk was initialized with a seed radius of $\sigma$ = 0.1$^\circ$ and position centered on the radio position of \Gone. We define the significance of extension as in \cite{Lande12}; ${\rm TS_{ext} = 2~log(\mathcal{L}_{ext} / \mathcal{L}_{ps})}$, with $\mathcal{L}_{ext}$ being the likelihood of the model with the extended source and $\mathcal{L}_{ps}$ that with of a point source located at the peak of emission interior to the extended source. For the disk model,  ${\rm TS_{ext} = 298}$, with a best fit radius, ${\rm \sigma = 1.40^\circ \pm 0.03^\circ}$ \jamie{I should just put this all in a table and reference it}, which is in excellent agreement with the radio size of the SNR determined in \cite{Gao14}. We tried adding back in to our model the two removed 3FGL sources but both were insignificant when fit on top of the best fit disk. Figure \ref{fig:1GeV_resTSmap_noG150} is a Residual TS map of the same region as Figure \ref{fig:1GeV_resTSmap}, but with the disk source included in the background showing that the disk can account well for the emission in the region. 
+We modeled the excess emission in the direction of \Gone ~with a uniform intensity, radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model  via \ptlike. The extension of the disk was initialized with a seed radius of $\sigma$ = 0.1$^\circ$ and position centered on the radio position of \Gone. We define the significance of extension as in \cite{Lande12}; ${\rm TS_{ext} = 2~log(\mathcal{L}_{ext} / \mathcal{L}_{ps})}$, with $\mathcal{L}_{ext}$ being the likelihood of the model with the extended source and $\mathcal{L}_{ps}$ that with of a point source located at the peak of emission interior to the extended source. For the disk model,  ${\rm TS_{ext} = 298}$, with a best fit radius, ${\rm \sigma = 1.40^\circ \pm 0.03^\circ}$ \jamie{I should just put this all in a table and reference it}, which is in excellent agreement with the radio size of the SNR determined in \cite{Gao14}. We tried adding back in to our model the two removed 3FGL sources but both were insignificant when fit on top of the best fit disk. Figure \ref{fig:1GeV_resTSmap}, bottom, is a residual TS map of the same region as Figure \ref{fig:1GeV_resTSmap}, but with the disk source included in the background showing that the disk can account well for the emission in the region. \jamie{reword this since I put the two plots in one figure}
 
 The morphology of the radio emission is suggestive of an elliptical or ring morphology, so an elliptical disk and ring spatial model were tested as well. For the ring model, the fit reduced to a disk with parameters matching those stated above. Using the elliptical model showed a weak improvement over the radially symmetric model at the 2.6$\sigma$ level (${\rm \Delta TS = 9}$ with two additional degrees of freedom), which we did not consider significant enough to say the GeV emission had an elliptical morphology (see Table \ref{tab:LATres}). For the remainder of this study, we only considered the disk spatial model.\jamie{put Edisk in table too and reference i.}
 \jamie{I should double check this for 1GeV- 1TeV. I was done for 1-562 GeV, wait till addSrcs is done}
