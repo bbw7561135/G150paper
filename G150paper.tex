@@ -115,15 +115,15 @@ In this analysis, we  analyzed 7 years of Pass 8 data, from August 2nd 2008  to 
 
 For spectral and spatial analysis we utilized both the standard \Fermi Science Tools (version 10-01-01)\footnote[1]{\url{http://fermi.gsfc.nasa.gov/ssc/}} , and the binned maximum likelihood package \ptlike~\citep{Kerr10}. \ptlike~provides methods for simultaneously fitting the spectrum, position, and spatial extension of a source, and was extensively validated in \cite{Lande12}. Both packages fit a source model, the Galactic diffuse emission, and an isotropic component (which accounts for the background of misclassified charged particles and the extragalactic diffuse \gam~ background)\footnote[2]{\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html}} to the observations. In this analysis, we used the standard Galactic diffuse ring-hybrid model scaled for Pass 8 analysis, gll{\_}iem{\_}v06.fits (modulated by a power law function with free index and normalization), and for the isotropic emission,  we used iso{\_}P8R2{\_}SOURCE{\_}V6{\_}v06.txt, extrapolated to 2 TeV as in \cite{2FHL}.
 
-In our source model for the region, we included sources from the third \FermiLat catalog \citep[3FGL]{3FGL} within 15$^\circ$ of the center of our region of interest (RoI). We replaced the position and spectrum of any 3FGL pulsars in the region with their corresponding counterpart  from the LAT 2nd pulsar catalog \citep{2PC}.  Residual emission unaccounted for by 3FGL sources is present in the RoI due to the increased time range and different energy selection with respect to that in 3FGL. We added to the RoI several significant ($\mathrm{TS \geq 16}$) point sources to account for this unmodeled emission and minimize the global residuals. The closest of these sources added was about 1$^{\circ}$ away from the edge of the best fit GeV disk. \jamie{ Considering the size of the PSF at 1 GeV, the affect of these sources on the disk fit was assumed to be  negligible. do I need to say more about these sources? should I mention adding them automatially and iteraively based on TS maps and reference SNRcat/2FHL?}.  The normalization and spectral index of sources within 5$^{\circ}$ of the center of the RoI were free to vary, whereas all other source parameters were fixed. A preliminary maximum likelihood fit of the RoI was performed, and  sources with a test statistic (TS) $<$ 9 (TS is defined as,  ${\rm TS}=2~{\rm Log}(\mathcal{L}_1 / \mathcal{L}_0)$ where $\mathcal{L}_1$ 
+In our source model for the region, we included sources from the third \FermiLat catalog \citep[3FGL]{3FGL} within 15$^\circ$ of the center of our region of interest (RoI). We replaced the position and spectrum of any 3FGL pulsars in the region with their corresponding counterpart  from the LAT 2nd pulsar catalog \citep{2PC}.  Residual emission unaccounted for by 3FGL sources is present in the RoI due to the increased time range and different energy selection with respect to that in 3FGL. We added to the RoI several significant (${\rm TS \geq 16}$) point sources to account for this unmodeled emission and minimize the global residuals. The closest of these sources added was about 1$^{\circ}$ away from the edge of the best fit GeV disk. \jamie{ Considering the size of the PSF at 1 GeV, the affect of these sources on the disk fit was assumed to be  negligible. do I need to say more about these sources? should I mention adding them automatically and iteratively based on TS maps and reference SNRcat/2FHL?}.  The normalization and spectral index of sources within 5$^{\circ}$ of the center of the RoI were free to vary, whereas all other source parameters were fixed. A preliminary maximum likelihood fit of the RoI was performed, and  sources with a test statistic (TS) $<$ 9 (TS is defined as,  ${\rm TS}=2~{\rm Log}(\mathcal{L}_1 / \mathcal{L}_0)$ where $\mathcal{L}_1$ 
  is the likelihood of source plus background and  $\mathcal{L}_0$ that of just the background) were removed from the model. 
 
 \subsection{\label{sec:LATmorph}Morphological Analysis}
 Studying the spatial extension of sources with the LAT is non-trivial due to the energy-dependent point spread function (PSF) and strong diffuse emission present in the Galactic plane. Soft spectrum point sources and uncertainties in the diffuse model can act as sources of systematic error when not accurately modeling extended emission as such, particularly at low energies where the PSF is broad. To strike a balance between the best angular resolution and minimal source and diffuse contamination, we restrict our morphological analysis to energies between 1 GeV and 1 TeV. We divide this energy range into 12 \jamie{4bpd} logarithmically spaced bins for both \ptlike~and \gtlike~binned likelihood analyses. 
 
-Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0425.8+ 5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index ${\rm \Gamma = 2.35\pm 0.17}$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, ${\rm \Gamma = 2.63\pm 0.15}$, with no clear multiwavelength source association. Finally, 3FGL J0426.7+5437 has a pulsar-like spectrum, yet in a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. This source is located about 0.8$^{\circ}$ from the center of the SNR. We discuss 3FGL J0426.7+5437 and potential association with \Gone{} further in $\S$\ref{sec:Dist}). 
+Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0425.8+ 5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index ${\rm \Gamma = 2.35\pm 0.17}$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, ${\rm \Gamma = 2.63\pm 0.15}$, with no clear multiwavelength source association. Finally, \psrLike{} has a pulsar-like spectrum, yet in a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. This source is located about 0.8$^{\circ}$ from the center of the SNR. We discuss \psrLike{} and potential association with \Gone{} further in $\S$\ref{sec:Dist}). 
 
-In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI, but kept 3FGL J0426.7+5437 in the model since preliminary analyses showed clear positive residual emission at the position of the source if it was removed from the RoI. Figure \ref{fig:1GeV_resTSmap} shows a residual TS map for the region around \Gone. This point source detection-significance map was created by placing a point source modeled with a power law of photon index $\Gamma$ = 2  at each pixel and gives the significance of detecting a point source at each location above the background. 
+In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI, but kept \psrLike{} in the model since preliminary analyses showed clear positive residual emission at the position of the source if it was removed from the RoI. Figure \ref{fig:1GeV_resTSmap} shows a residual TS map for the region around \Gone. This point source detection-significance map was created by placing a point source modeled with a power law of photon index $\Gamma$ = 2  at each pixel and gives the significance of detecting a point source at each location above the background. 
 
 %put file name in {} to get it to compile with dots in the name!
 %for png, have to use pdfchain
@@ -131,7 +131,7 @@ In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI,
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{{G150_1GeV_resTsmap_radio_2FHL_noLabs}.pdf}
 		\includegraphics[width=\columnwidth]{{G150_1GeV_resTsmapNoG150_radio_2FHL_noLabs}.pdf}
-		\caption{Background subtracted residual TS map above 1 GeV with 0.1$^\circ$x 0.1$^\circ$ pixels for fixed index $\Gamma$ = 2, centered on SNR \Gone. The orange circle and translucent shading show the fit disk radius and 1$\sigma$ errors, respectively, for the extended source, the orange cross shows the position of 3FGL J0426.7+5437 (included in the background model), blue dashed circle is the extent of the radio SNR, and white dashed circle depicts \ghard{}. Bottom includes \Gone{} in the background model, top does not.
+		\caption{Background subtracted residual TS map above 1 GeV with 0.1$^\circ$x 0.1$^\circ$ pixels, centered on SNR \Gone. The orange circle and translucent shading show the fit disk radius and 1$\sigma$ errors, respectively, for the extended source, the orange cross shows the position of \psrLike{} (included in the background model), blue dashed circle is the extent of the radio SNR, and white dashed circle depicts \ghard{}. Bottom map includes \Gone{} in the background model, top does not.
 			\label{fig:1GeV_resTSmap}}
 	\end{centering}
 \end{figure}
@@ -145,31 +145,27 @@ In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI,
 %	\end{centering}
 %\end{figure}
 
-We modeled the excess emission in the direction of \Gone ~with a uniform intensity, radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model  via \ptlike. The extension of the disk was initialized with a seed radius of $\sigma$ = 0.1$^\circ$ and position centered on the radio position of \Gone. We define the significance of extension as in \cite{Lande12}; ${\rm TS_{ext} = 2~log(\mathcal{L}_{ext} / \mathcal{L}_{ps})}$, with $\mathcal{L}_{ext}$ being the likelihood of the model with the extended source and $\mathcal{L}_{ps}$ that of a point source located at the peak of emission interior to the extended source. For the disk model,  ${\rm TS_{ext} = 298}$, with a best fit radius, ${\rm \sigma = 1.40^\circ \pm 0.03^\circ}$  which is in excellent agreement with the radio size of the SNR determined in \cite{Gao14}. We tried adding back in to our model the two removed 3FGL sources but both were insignificant when fit on top of the best fit disk. The bottom map in Figure \ref{fig:1GeV_resTSmap} is a residual TS map of the same region as the top map of the same Figure, but with the disk source included in the background demonstrating that the disk can account well for the emission in the region and justifying the exclusion of the 2 aforementioned 3FGL sources.
+We modeled the excess emission in the direction of \Gone ~with a uniform intensity, radially-symmetric disk, simultaneously fitting the spatial and spectral components of the model  via \ptlike. The extension of the disk was initialized with a seed radius of $\sigma$ = 0.1$^\circ$ and position centered on the radio position of \Gone. We define the significance of extension as in \cite{Lande12}; ${\rm TS_{ext} = 2~log(\mathcal{L}_{ext} / \mathcal{L}_{ps})}$, with $\mathcal{L}_{ext}$ being the likelihood of the model with the extended source and $\mathcal{L}_{ps}$ that of a point source located at the peak of emission interior to the extended source. For the disk model we found that  ${\rm TS_{ext} = 298}$, for the best fit radius, ${\rm \sigma = 1.40^\circ \pm 0.03^\circ}$, and position,  ${\rm R.A. = 55.46^\circ \pm 0.03^\circ }$, ${\rm DEC. = 66.91^\circ \pm 0.03^\circ }$, all in excellent agreement with the radio SNR size and centroid determined in \cite{Gao14}. \jamie{do other LAT papers give the TS of extended source too? ${\rm TS = 373}$}. We tried adding back in to our model the two removed 3FGL sources but both were insignificant when fit on top of the best fit disk. The bottom map in Figure \ref{fig:1GeV_resTSmap} is a residual TS map of the same region as the top map of the same Figure, but with the disk source included in the background model, demonstrating that the disk can account well for the emission in the region and justifying the exclusion of the two aforementioned 3FGL sources.
 
-The morphology of the radio emission is suggestive of an elliptical or ring morphology, so an elliptical disk and ring spatial model were tested as well. For the ring model, the fit reduced to a disk with parameters matching those stated above. Using the elliptical model showed a weak improvement over the radially symmetric model at the 2.6$\sigma$ level (${\rm \Delta TS = 9}$ with two additional degrees of freedom), which we did not consider significant enough to say the GeV emission had an elliptical morphology \jamie{ should I have a table for the different morphs even though they're insiginf? (see Table \ref{tab:LATres})}. For the remainder of this study, we only considered the disk spatial model.
-\jamie{I should double check this for 1GeV- 1TeV. I was done for 1-562 GeV, running it now!}
+The morphology of the radio emission is suggestive of an elliptical or ring morphology, so both of these spatial models were tested as well. For the ring model, the fit reduced to a disk with parameters matching those stated above. Using the elliptical model showed a weak improvement over the radially symmetric model at the 2.6$\sigma$ level (${\rm \Delta TS = 9}$ with two additional degrees of freedom), which we did not consider significant enough to say the GeV emission had an elliptical morphology (see Table \ref{tab:LATres}). For the remainder of this study, we only considered the disk spatial model.
+\jamie{ double check this for 1GeV- 1TeV. I was done for 1-562 GeV, running it now!}
 
-\ghard{} is the extended source detected in the 2FHL catalog found to be overlapping the northern region of \Gone{} \cite{2FHL}. The source has a power law spectral index ${\rm \Gamma = 1.66 \pm 0.2}$, and disk radius ${\rm \sigma = 1.27^\circ \pm 0.04^\circ}$ (see Figure \ref{fig:1GeV_resTSmap}). When comparing the best fit radius of the 2FHL source with the result from this paper, factoring in the uncertainty in both extension and postion, we see that the $>$ 50 GeV and $>$ 1 GeV results are not incompatible. It is like that the paucity of events above 50 GeV is the cause of the smaller best fit extension, as opposed the difference arising from the effects of an and energy dependent morphology..
+\ghard{} is the extended source detected in the 2FHL catalog found to be overlapping the northern region of \Gone{} \cite{2FHL}. The source has a power law spectral index ${\rm \Gamma = 1.66 \pm 0.2}$, and disk radius ${\rm \sigma = 1.27^\circ \pm 0.04^\circ}$ (see Figure \ref{fig:1GeV_resTSmap}). When comparing the best fit extension of the 2FHL source with the result from this paper, factoring in the uncertainty in both extension and position, we see that the $>$ 50 GeV and $>$ 1 GeV results are not incompatible. It is likely that the paucity of events above 50 GeV is the cause of the smaller fit radius, as opposed to the difference arising from the effects of an energy dependent morphology. To explore the connection between the 2FHL and above 1 GeV emission, we tested a few other spatial hypotheses.
+
+First, we  replaced the ${\rm \sigma = 1.40^{\circ}}$ disk with an another disk matching the spectral and spatial parameters of \ghard{} and calculated the likelihood with this new source's position and extension fixed. For this hypothesis, we find ${\rm TS_{ext} =  165}$, and  ${\rm TS = 226}$, demonstrating that the fixed disk matching the 2FHL source is clearly disfavored over the previously determined best fit disk at this energy. Our next test consisted of placing a second extended source on top of the best fit disk detected above 1 GeV. We added a source, initially matching the spatial and spectral parameters of \ghard{}, to our source model of the region (in addition to the ${\rm \sigma = 1.40^{\circ}$ disk), and fit its spectrum and extension. Fitting a second extended source in this region serves two purposes: 1. it acts as a check on whether there was residual emission unaccounted for by the previously best-fit disk, and 2. it allows us to determine if the best fit disk can be split into two spectrally distinct, components. This fit resulted in the source wandering north (but still partially overlapping \Gone{}) and having an insignificant extension, ${\rm TS_{ext} =  4}$. Details on the spatial parameters are given in Table \ref{tab:LATres}.
 
 
-we fit both a fixed and free source on top of G150
-Fitting an extended source on top of G150 1 GeV that looked like the 2FHL source. I think this does 2 things. 1. It checks for a residual extended source on top of G150 1 GeV. 2. If were two spectrally distinct sources, we'd hope it got picked up.
+\jamie{Something about J0426?like  how modeling G150 as point vs extended if it's really extended can affect the fit of other point sources nearby, like J0426, so show the spectrum of this source too?  I fit both the norm and index of the source. Save this for discussion? How does the spectrum of J0426 change with the new source? Maybe the most that needs to be said is that below 1 GeV it's confused with }
 
-Same but starting at the position of G149.
+\jamie{from Josh's paper:  modelling the spectrum of an intrisically extended source as point sources skews the PS spectrum to softer energies "Specifically, modeling a spatially extended source as point-like will systematically soften measured spectra", idk if I get why. We see it with the 2 removed 3FGL sources being softer than what the disk winds up being.}
 
-Say something about why we don't just go with the three 3FGL sources. In the table I shouldn't just compare the 3 to the disk though because I also keep J0426 in the model. So the base comparison is really 2 sources vs the disk. Maybe it's enough to just say of course we keep the disk, we find one at GeV that matches really well with the radio. What did Josh's paper say about how modelling the spectrum of an intrisically extended source as point sources skews the PS spectrum to softer energies?
-
-He said, "Specifically, modeling a spatially extended source as point-like will systematically soften measured spectra", but idk if I get why. We see it with the 2 3FGL sources being softer than what the disk winds up being
-
-Another thing to point out is how modeling as point vs extended, if it's really extended can affect the fit of other point sources nearby, like J0426, so I should show the spectrum of this source too?  I fit both the norm and index of the source. 
 \input{Tables/latRes.tex}
 
 \begin{figure}[!ht]
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{{G150_extProf_1GeV}.png}
 		\includegraphics[width=\columnwidth]{{TSextVsEn_G150_1GeV_1TeV_sigma1_4}.png}
-		\caption{Not sure I want to include these, replot, get rid of titles, and make them look nicer if I do want to include. Top plot shows that the TS peaks at the best fit extension. Lower plot gives a sense of how significant the extension is (vs a point source) across the analyzed energy range. .
+		\caption{Not sure I want to include these, replot, get rid of titles, and make them look nicer if I do want to include. Top plot shows that the TS peaks at the best fit extension. Lower plot gives a sense of how significant the extension is (vs a point source) across the analyzed energy range. If I keep, add text in the section
 			\label{fig:1GeV_ext}}
 	\end{centering}
 \end{figure}
@@ -203,13 +199,16 @@ Another thing to point out is how modeling as point vs extended, if it's really 
 %%%%%%
 
 \subsection{\label{sec:LATspec}Spectral Analysis}
-After determining the best fit morphology with \ptlike{} for the GeV emission coincident with SNR \Gone{}, we used those results as a starting point for our \gtlike{} maximum likelihood fit of the region to estimate the best spectral parameters for our model. The LAT data is well described by a power law across the entire energy range with a photon index, ${\rm \Gamma = 1.82 \pm 0.04}$, and energy flux above 1 GeV of ${\rm (7.17 \pm 0.73~ x 10^{-11})~ erg~cm^{-2}~ s^{-1}}$and TS = 373 \jamie{pointlike results were index = 1.80 flux = ${\rm (7.17 \pm 0.73~ x 10^{-11})~ erg~cm^{-2}~ s^{-1}}$}. We tested the \gam ~spectrum of the extended disk for spectral curvature using a log-normal model (Log Parabola), and find no significant deviation from a power law (${\rm \Delta TS \sim 1}$). \jamie{what else to include here? Systematics. Bracketing IRFs, alt iem, try varying the extension? still to be done.} Figure \ref{fig:G150SED} shows the best fit power law spectral energy distribution for the GeV emission whose morphology was described in Section $\ref{sec:LATmorph}$. What to say about the J0426
+After determining the best fit morphology with \ptlike{} for the GeV emission coincident with SNR \Gone{}, we used those results as a starting point for our \gtlike{} maximum-likelihood fit of the region to estimate the best spectral parameters for our model. The LAT data is well described by a power law from 1 GeV to 1 TeV with a photon index, ${\rm \Gamma = 1.82 \pm 0.04}$, and energy flux above 1 GeV of ${\rm (7.17 \pm 0.73)~ x 10^{-11}~ erg~cm^{-2}~ s^{-1}}$and TS = 389 \jamie{pointlike results were index = 1.80 flux = ${\rm (7.17 \pm 0.73~ x 10^{-11})~ erg~cm^{-2}~ s^{-1}}$}. We tested the \gam{} spectrum of the extended disk for spectral curvature using a log-normal model (Log Parabola), and find no significant deviation from a power law (${\rm \Delta TS \sim 1}$). Figure \ref{fig:G150SED} shows the best-fit power law spectral energy distribution for the GeV source whose morphology was described in Section $\ref{sec:LATmorph}$. Spectral data points were obtained by dividing the energy range into 12 logarithmically spaced bins and modeling the source with a power law of fixed spectra index, ${\rm \Gamma = 2}$.
+
+\jamie{what else to include here? Systematics. Bracketing IRFs, alt iem, try varying the extension? still to be done.}
 
 %%%G150 pointlike SED: G150_1GeV_resTsmap_radio_noLabs.pdf
 \begin{figure}[!ht]
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{Figures/{G150.3+4.5_gtlikeNewSED}.pdf}
-		\caption{Spectral energy distribution for the extended source coincident with SNR \Gone. \jamie{Butterfly?}
+		\caption{Spectral energy distribution for the extended source coincident with SNR \Gone{} from 1 GeV to 1 TeV. Red line corresponds to the best fit power law model. Crosses are shown with with statistical error bars \jamie{add systematics when I have them}.
+			 \jamie{Butterfly?}
 			\label{fig:G150SED}}
 	\end{centering}
 \end{figure}
@@ -218,7 +217,7 @@ After determining the best fit morphology with \ptlike{} for the GeV emission co
 \begin{figure}[!ht]
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{Figures/{3FGL_J0426.7+5437_gtlike_defaultBkgRefit_SED}.pdf}
-		\caption{Spectral energy distribution of 3FGL J0426. \jamie{Replot this make it look nicer}
+		\caption{Spectral energy distribution of \psrLike{}. \jamie{Replot this make it look nicer}
 			\label{fig:J0426SED}}
 	\end{centering}
 \end{figure}
@@ -244,6 +243,9 @@ No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\label{sec:Discuss}Discussion and Results}
 \subsection{\label{sec:What}What is it?}
+
+I haven't been calling the GeV source \Gone{} this whole time. should I be?
+
 Size + HI suggest that near distance corresponding to different HI velocities suggest it's aged, spectrum looks more like young SNR (hard + no GeV break ). Is it a weird young remnant or weird aged one? Leptonic dominated if young, hadronic dominated if older? Something about nearby dense clouds masking hadronic emission? Maybe this is only true for MeV cosmic rays that are screened out though and it would only mask the pion bump, but not this higher energy emission?
 
 PWN or SNR. Can we rule out PWN? See W41 paper, MSH 11-61A, Fabios recent G326 work (no, he just tries to use the PSF types and testing different model templates to try to disentangle SNR from PWN)?
@@ -255,11 +257,25 @@ Assume it's in Sedov phase based on size + near distance, and calculate age, upp
 
 If we assume close distance, age is only $\approx$ 5kyr, maybe this is a transitional SNR? What do others like this look like? Puppis A? Gamma Cygni is a similar age too.something 
 
-
+Say something about what the radio index is and the connection to the gev index
+\jamie{remake the G150 all SNR SEDs with the new gtlike data points}
 \subsection{\label{sec:Dist}Distance Considerations}
 probably doesn't need to be a different section. 
 \subsection{\label{secModel}Nonthermal Modeling}
-I think I could get a working model with naima running pretty quickly, is it worth it?
+Have a working model using naiama. What more needs to be done?
+
+Add bremss. properly scale the radio flux density. Talk to Dan about whether it makes sense. Are there params that I can fix? Kep, B? Any reason to have different n? Liz had doubts about the pp component extending to such high energy, is this really an issue?
+
+\input{Tables/naima.tex}
+
+\begin{figure}[!ht]
+	\begin{centering}
+		\includegraphics[width=\columnwidth]{Figures/G150_ICsync_PP_SED.pdf}
+		\caption{ \Gone. Naima SED \jamie{bigger font, get rid of text for each line} }
+			\label{fig:naimaSED}
+	\end{centering}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %         Conclusion
