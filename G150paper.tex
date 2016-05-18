@@ -1,14 +1,14 @@
 %\documentclass[preprint,12pt]{aastex}
-\documentclass[preprint2]{aastex}
-%\documentclass[iop]{emulateapj}
+%\documentclass[preprint2]{aastex}
+\documentclass[iop]{emulateapj}
 %\usepackage{subfigure}
 \usepackage{natbib}
 %not sure I really need these
 \usepackage{calrsfs,euscript,mathrsfs,amssymb}
 \usepackage{graphicx}
 \graphicspath{ {Figures/} }
-\usepackage[hyphens]{url}
-\usepackage{hyperref}
+%\usepackage[hyphens]{url}
+%\usepackage{hyperref}
 %\usepackage{deluxetable}
 
 %not sure what this does
@@ -78,7 +78,7 @@
 
 \begin{abstract}
 
-We report here a dedicated analysis of the \gam{} emission around supernova remnant (SNR) \Gone, observed with the Large Area Telescope (LAT) on board the \textit{Fermi Gamma-Ray Space Telescope}. The Second Catalog of Hard \FermiLat Sources reported detection of a hard spectrum, spatially extended source from 50 GeV - 2TeV, partially overlapping \Gone. Lowering the energy threshold to 1 GeV, we significantly detect a large ({\rm $\sigma = 1.40^{\circ} \pm 0.03^{\circ}$}) extended \gam{} source consistent with the entirety of the radio shell and displaying a power law spectral index of ${\rm 1.82 \pm 0.04}$. An obtained HI spectrum toward the SNR suggests that the remnant could be one of the closest to us and estimates of its age indicate that \Gone ~may be in the Sedov-Taylor phase \jamie{not sure about this, maybe distance is very uncertain, and hence age as well? My age estimate was $\sim$ 6kyr. Need to think about dynamically young vs. young, fast shocks like which SNR? does dynamically young say something more about the progenitor explosion or surrounding medium?}.  In contrast, the spectrum of the \gam{} ]source is more akin to that of a young, leptonic dominated SNR, although ROSAT X-ray observations show no signs of nonthermal emission coincident typically observed in young SNRs. We discuss alternate origin scenarios for the \gam{} emission...
+\jamie{not ready yet} We report here a dedicated analysis of the \gam{} emission around supernova remnant (SNR) \Gone, observed with the Large Area Telescope (LAT) on board the \textit{Fermi Gamma-Ray Space Telescope}. The Second Catalog of Hard \FermiLat Sources reported detection of a hard spectrum, spatially extended source from 50 GeV - 2TeV, partially overlapping \Gone. Lowering the energy threshold to 1 GeV, we significantly detect a large ({\rm $\sigma = 1.40^{\circ} \pm 0.03^{\circ}$}) extended \gam{} source consistent with the entirety of the radio shell and displaying a power law spectral index of ${\rm 1.82 \pm 0.04}$. An obtained HI spectrum toward the SNR suggests that the remnant could be one of the closest to us and estimates of its age indicate that \Gone ~may be in the Sedov-Taylor phase \jamie{not sure about this, maybe distance is very uncertain, and hence age as well? My age estimate was $\sim$ 6kyr. Need to think about dynamically young vs. young, fast shocks like which SNR? does dynamically young say something more about the progenitor explosion or surrounding medium?}.  In contrast, the spectrum of the \gam{} ]source is more akin to that of a young, leptonic dominated SNR, although ROSAT X-ray observations show no signs of nonthermal emission coincident typically observed in young SNRs. We discuss alternate origin scenarios for the \gam{} emission...
  \jamie{ Should I have the words Pass 8 here somewhere, make it all shorter? move the on board stuff to intro. }
 
 \end{abstract}
@@ -97,7 +97,7 @@ We report here a dedicated analysis of the \gam{} emission around supernova remn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction} 
-Supernova remnants have long been thought to be the primary accelerators of cosmic rays up to the knee of the cosmic ray energy spectrum. 
+\jamie{not ready yet}Supernova remnants have long been thought to be the primary accelerators of cosmic rays up to the knee of the cosmic ray energy spectrum. 
 
 what to say about radio SNRs? Connect CRs to nonthermal emission and the LAT and 
 Something about SNRs, cosmic ray accelerators, radio detections, connection between radio-LAT observations, G150 detection, 2FHL blind detection and SNRs at TeV (all young?)
@@ -265,12 +265,20 @@ Say something about what the radio index is and the connection to the gev index
 probably doesn't need to be a different section. 
 \subsection{\label{secModel}Nonthermal Modeling}
 
-SNR shock fronts are known accelerators of cosmic rays to very high energies. There are potentially multiple radiation mechanisms operating at the shock that produce GeV \gam{}s. Accelerated electrons can give rise to inverse Compton (IC) emission via upscattering of ambient CMB, stellar, and IR photon fields, as well as non-thermal bremsstrahlung radiation. Energetic protons can collide with ambient protons in the surrounding, producing neutral pions which decay into \gam{} photons. 
+SNR shock fronts are known accelerators of cosmic rays to very high energies. There are potentially multiple radiation mechanisms operating at the shock that produce GeV \gam{}s. Accelerated electrons can give rise to inverse Compton (IC) emission via upscattering of ambient cosmic microwave background (CMB), stellar, and IR photon fields, as well as non-thermal bremsstrahlung radiation. Energetic protons can collide with ambient protons in the surrounding, producing neutral pions which decay into \gam{} photons. 
 
-To infer the properties of the underlying relativistic particle populations in the SNR environment, it is vital to understand the origin of the observed \gam{} emission detected from  \Gone{}. To do so, we employ the \nai{} Python package. \nai{} is an open-source code base that computes the non-thermal radiation from a relativistic particle population \citep{Zabalza15}. It utilizes known parameterizations and analytic approximations to the various non-thermal processes (i.e. synchrotron, IC, bremsstrahlung, and pion decay emission), which results in the calculations being computationally cheap. \nai{} also makes use of \emc{}, a Markov chain Monte Carlo (MCMC) ensemble sampler for Bayesian parameter estimation \citep{Foreman13}. The sampler is used to find the best-fit parameters of the radiative models to the observed photon SED for a given particle distribution function. 
+To infer the properties of the underlying relativistic particle populations in the SNR environment, it is vital to understand the origin of the observed \gam{} emission detected from  \Gone{}. To do so, we employ the \nai{} Python package. \nai{} is an open-source code base that computes the non-thermal radiation from a relativistic particle population \citep{Zabalza15}. It utilizes known parameterizations and analytic approximations to the various non-thermal processes (i.e., synchrotron, IC, bremsstrahlung, and pion decay emission), which results in the calculations being computationally inexpensive. \nai{} also makes use of \emc{}, a Markov chain Monte Carlo (MCMC) ensemble sampler for Bayesian parameter estimation \citep{Foreman13}. The sampler is used to find the best-fit parameters of the radiative models to the observed photon SED for a given particle distribution function. 
 
-To determine the best fit parameters, \nai{} calls \emc{} to sample the log-likelihood function (i.e. the likelihood of the observed data given the assumed spectrum) of the radiative model. The radiative models require as input a particle distribution function to model the present-age electron or proton spectrum. \nai{} inherently assumes a one-zone, homogeneous distribution, and for this work, we model the particle spectra as power laws with an exponential cut off, 
-${\rm f(E)_{e,p)} = A_{e,p} (E / E_0) ^{-\alpha} \exp (- (E / E_{cutoff}))}$, where E is the particle energy, ${\rm E_0}$ the reference energy, $\alpha$ the spectral index, and ${\rm E_{cutoff}}$ the cutoff energy. The electron distribution's normalization is related to the proton normalization by the electron-to-proton ratio scaling factor, $A_e = K_{ep} A_p$. We also assume that the electron and proton distributions have the spectral shape, and use a uniform prior probability distribution.
+To determine the best fit parameters, \nai{} calls \emc{} to sample the log-likelihood function (i.e.,  the likelihood of the observed data given the assumed spectrum) of the radiative model. The radiative models require as input a particle distribution function to model the present-age electron or proton spectrum. \nai{} inherently assumes a one-zone, homogeneous distribution, and we scaled the likelihood function by a uniform prior probability distribution. For this work, we model the particle spectra as power laws with an exponential cut off,
+
+\begin{equation}
+{\rm \frac{dN}{dE}_{e,p} = A_{e,p} (E / E_0) ^{-\alpha} \exp {\bigg ( }\frac{- E}{ E_{cutoff}}{\bigg)}}
+\end{equation}
+where E is the particle energy, ${\rm E_0}$ the reference energy, $\alpha$ the spectral index, and ${\rm E_{cutoff}}$ the cutoff energy. The electron distribution's normalization is related to the proton normalization through the electron-to-proton ratio scaling factor, $A_e = K_{ep} A_p$. We also assume that the electron and proton distributions have the same spectral shape.
+
+In our spectral model, we assume a gas density, ${\rm \n_0 = 1 cm^{-3}}$ for proton-proton \jamie{and bremss when I get it working} interactions For IC emission, we include CMB  
+Talk about free/ fixed params of the model, reference the table, and figure to show best fit, discuss results and what the fits imply regarding lep/had dom and energy in e- p.
+
 
 \input{Tables/naima.tex}
 
@@ -280,7 +288,8 @@ ${\rm f(E)_{e,p)} = A_{e,p} (E / E_0) ^{-\alpha} \exp (- (E / E_{cutoff}))}$, wh
 \jamie{estimates min of negative loglike through sampling}	
 
 \jamie{for thesis, I can get into more details about what the radiation models are doing and what the MCMC sampler does?}
-\jamie{naima to do:Add bremss. properly scale the radio flux density. should I be using a power law particle dist function because I have a power law photons spec? increase walker number burn in and runs?Do the energetics make sense? Are there params that I can fix? Kep, B? Any reason to have different n? Liz had doubts about the pp component extending to such high energy, is this really an issue?}
+
+\jamie{naima to do:Add bremss. properly scale the radio flux density. should I be using a power law particle dist function because I have a power law photons spec? increase walker number burn in and runs?Do the energetics make sense? Are there params that I can fix? Kep, B? Any reason to have different n? Liz had doubts about the pp component extending to such high energy, is this really an issue? gtlike finds the best fit index, does the fit value from naima for the particle dist match this? maybe I should fix the particle index based on this? Should the cutoff be the same for e- and p? Do I have to set E0 in naima to 10 GeV for Kep?}
 
 \begin{figure}[!ht]
 	\begin{centering}
@@ -296,7 +305,6 @@ ${\rm f(E)_{e,p)} = A_{e,p} (E / E_0) ^{-\alpha} \exp (- (E / E_{cutoff}))}$, wh
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\label{sec:Conc}Conclusions}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`%%%%%%

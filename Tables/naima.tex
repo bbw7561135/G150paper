@@ -1,15 +1,15 @@
-\begin{deluxetable}{cccccc}
+\begin{deluxetable}{ccccc}
 \setlength{\tabcolsep}{0.04in}
 \tablewidth{0pt}
 \tabletypesize{\scriptsize}
-\tablecaption{Naima Parameters\label{tab:naima}}
+\tablecaption{Naima Model Best Fit Parameters\label{tab:naima}}
 \tablehead{
-\colhead{Spatial Model\,} & 
+\colhead{Spatial Model} & 
 \colhead{TS$_{ext}$} &
-\colhead{TS ,\tablenotemark{a}} & 
+\colhead{TS\tablenotemark{a}} & 
 \colhead{$\sigma$ [$^\circ$]} &
-\colhead{R.A. [$^\circ$]} &
-\colhead{DEC [$^\circ$]}} %\\
+\colhead{R.A. [$^\circ$]}}
+%\colhead{DEC [$^\circ$]}} %\\
 %\colhead{} & 
 %\colhead{} & 
 %\colhead{} &
@@ -17,15 +17,17 @@
 %\colhead{} &
 %\colhead{}
 \startdata
-Disk             &    278.843 &     -32.850 &  49.80  & LMC           & gal   \\
-Elliptical Disk  &    189.048 &      3.033  &  398.64 & IC~443        & snr  \\
-Disk + 2FHL      &    260.317 &     -3.277  &  63.87  & Puppis A      & snr    \\
-2FHL (No Disk)   &    260.317 &     -3.277  &  63.87  & Puppis A      & snr    \\
-%\cutinhead{Thee Point Sources}
+\cutinhead{Free  Parameters}
+${\rm A_p}$             &    278.843 &     -32.850 &  49.80  & LMC    \\ 
+ ${\rm K_{ep}}$ &    189.048 &      3.033  &  398.64 & IC~443        \\
+Disk + 2FHL      &    260.317 &     -3.277  &  63.87  & Puppis A       \\
+2FHL (No Disk)   &    260.317 &     -3.277  &  63.87  & Puppis A     \\
+\cutinhead{Fixed Model Parameters}
+2FHL (No Disk)   &    260.317 &     -3.277  &  63.87  & Puppis A       \\
 %\sidehead{Uniform Disk}
 
 \enddata
-\tablecomments{~Add table with results from naima model? Two cols with param name and value? Split for fit and fixed params? These are just the same vals from table 1 for now}
+\tablecomments{~ Results from naima model? Two cols with param name and value? Split for fit and fixed params? Right now the free params are index, kep, eleccut, protcut, B. Fixed are nh, all the IC photon field values distance (this is just for determining flux)These values are just the same vals from table 1 for now. Make the table the other way, param as col heads, with table note or dagger for free/fixed, vals below. }
 
 \tablenotetext{a}{Calculated in \gtlike}
 \end{deluxetable}
