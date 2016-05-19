@@ -43,8 +43,8 @@
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand{\kms}{km s$^{-1}$}
 \newcommand{\msol}{\hbox{$M_\odot$}}            % Solar mass
-\newcommand{\Fermi}{\emph{Fermi }}  % Fermi
-\newcommand{\FermiLat}{\emph{Fermi} LAT }     %Fermi LAT
+\newcommand{\Fermi}{\emph{Fermi}}  % Fermi
+\newcommand{\FermiLat}{\emph{Fermi}-LAT }     %Fermi LAT
 \newcommand{\ptlike}{{\tt pointlike}}
 \newcommand{\gtlike}{{\tt gtlike}}
 \newcommand{\nai}{{\tt naima}}
@@ -124,7 +124,7 @@ multiwavelength observations in $\S$\ref{sec:Multiwave}, and discuss various emi
 
 In this analysis, we  analyzed 7 years of Pass 8 data, from August 2nd 2008  to August 2nd 2015. The Pass 8 event reconstruction provides a significantly improved angular resolution \jamie{this is sadly unimportant unless I'm at higher energy or using the PSF types. The P8 total PSF at 1 GeV is about the same as for P7REP. It's the acceptance/effective area that are considerably better at this energy}, acceptance, and background event rejection \citep{atwood13b,atwood13}, all of which lead to an increase in the effective energy range and sensitivity of the LAT. Source class events were analyzed within a 14$^\circ$x14$^\circ$ region centered on SNR \Gone~using the P8R2\_SOURCE\_V6 instrument response functions, with a pixel size of 0.1$^{\circ}$. To reduce contamination from earth limb \gam{}s, only events with zenith angle less than 100$^{\circ}$ were included.
 
-For spectral and spatial analysis we utilized both the standard \Fermi Science Tools (version 10-01-01)\footnote[1]{\url{http://fermi.gsfc.nasa.gov/ssc/}} , and the binned maximum likelihood package \ptlike~\citep{Kerr10}. \ptlike~provides methods for simultaneously fitting the spectrum, position, and spatial extension of a source, and was extensively validated in \cite{Lande12}. Both packages fit a source model, the Galactic diffuse emission, and an isotropic component (which accounts for the background of misclassified charged particles and the extragalactic diffuse \gam{}  background)\footnote[2]{\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html}} to the observations. In this analysis, we used the standard Galactic diffuse ring-hybrid model scaled for Pass 8 analysis, gll{\_}iem{\_}v06.fits (modulated by a power law function with free index and normalization), and for the isotropic emission,  we used iso{\_}P8R2{\_}SOURCE{\_}V6{\_}v06.txt, extrapolated to 2 TeV as in \cite{2FHL}.
+For spectral and spatial analysis we utilized both the standard \Fermi{} Science Tools (version 10-01-01)\footnote[1]{\url{http://fermi.gsfc.nasa.gov/ssc/}}, and the binned maximum likelihood package \ptlike~\citep{Kerr10}. \ptlike~provides methods for simultaneously fitting the spectrum, position, and spatial extension of a source, and was extensively validated in \cite{Lande12}. Both packages fit a source model, the Galactic diffuse emission, and an isotropic component (which accounts for the background of misclassified charged particles and the extragalactic diffuse \gam{}  background)\footnote[2]{\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html}} to the observations. In this analysis, we used the standard Galactic diffuse ring-hybrid model scaled for Pass 8 analysis, gll{\_}iem{\_}v06.fits (modulated by a power law function with free index and normalization), and for the isotropic emission,  we used iso{\_}P8R2{\_}SOURCE{\_}V6{\_}v06.txt, extrapolated to 2 TeV as in \cite{2FHL}.
 
 In our source model for the region, we included sources from the third \FermiLat catalog \citep[3FGL]{3FGL} within 15$^\circ$ of the center of our region of interest (RoI). We replaced the position and spectrum of any 3FGL pulsars in the region with their corresponding counterpart  from the LAT 2nd pulsar catalog \citep{2PC}.  Residual emission unaccounted for by 3FGL sources is present in the RoI due to the increased time range and different energy selection with respect to that in 3FGL. We added to the RoI several significant (${\rm TS \geq 16}$) point sources to account for this unmodeled emission and minimize the global residuals. The closest of these sources added was about 1$^{\circ}$ away from the edge of the best fit GeV disk. \jamie{ Considering the size of the PSF at 1 GeV, the affect of these sources on the disk fit was assumed to be  negligible. do I need to say more about these sources? should I mention adding them automatically and iteratively based on TS maps and reference SNRcat/2FHL?}.  The normalization and spectral index of sources within 5$^{\circ}$ of the center of the RoI were free to vary, whereas all other source parameters were fixed. A preliminary maximum likelihood fit of the RoI was performed, and  sources with a test statistic (TS) $<$ 9 (TS is defined as,  ${\rm TS}=2~{\rm Log}(\mathcal{L}_1 / \mathcal{L}_0)$ where $\mathcal{L}_1$ 
  is the likelihood of source plus background and  $\mathcal{L}_0$ that of just the background) were removed from the model. 
@@ -132,7 +132,7 @@ In our source model for the region, we included sources from the third \FermiLat
 \subsection{Morphological Analysis}\label{sec:LATmorph}
 Studying the spatial extension of sources with the LAT is non-trivial due to the energy-dependent point spread function (PSF) and strong diffuse emission present in the Galactic plane. Soft spectrum point sources and uncertainties in the diffuse model can act as sources of systematic error when not accurately modeling extended emission as such, particularly at low energies where the PSF is broad. To strike a balance between the best angular resolution and minimal source and diffuse contamination, we restrict our morphological analysis to energies between 1 GeV and 1 TeV. We divide this energy range into 12 \jamie{4bpd} logarithmically spaced bins for both \ptlike~and \gtlike~binned likelihood analyses. 
 
-Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0425.8+ 5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index ${\rm \Gamma = 2.35\pm 0.17}$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, ${\rm \Gamma = 2.63\pm 0.15}$, with no clear multiwavelength source association. Finally, \psrLike{} has a pulsar-like spectrum, yet in a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. This source is located about 0.8$^{\circ}$ from the center of the SNR. We discuss \psrLike{} and potential association with \Gone{} further in $\S$\ref{sec:Dist}). 
+Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0425.8+ 5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index ${\rm \Gamma = 2.35\pm 0.17}$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, ${\rm \Gamma = 2.63\pm 0.15}$, with no clear multiwavelength source association. Finally, \psrLike{} has a pulsar-like spectrum, yet in a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. This source is located about 0.84$^{\circ}$ from the center of the SNR. We discuss \psrLike{} and potential association with \Gone{} further in $\S$\ref{sec:Dist}). 
 
 In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI, but kept \psrLike{} in the model since preliminary analyses showed clear positive residual emission at the position of the source if it was removed from the RoI. Figure \ref{fig:1GeV_resTSmap} shows a residual TS map for the region around \Gone. This point source detection-significance map was created by placing a point source modeled with a power law of photon index $\Gamma$ = 2  at each pixel and gives the significance of detecting a point source at each location above the background. 
 
@@ -226,7 +226,7 @@ After determining the best fit morphology with \ptlike{} for the GeV emission co
 \subsection{CO?}\label{sec:CO}
 Jack's looking into Planck data for HI and CO
 \subsection{X-ray}\label{sec:Xray}
-No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near the center? Should a  pulsar even  be near the center? How to quantify this? Can we place a limit on ambient density with an upper limit on thermal X-ray emission? Magnetic filed with nonthermal?
+No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near the center? Should a  pulsar even  be near the center? How to quantify this? Can we place a limit on ambient density with an upper limit on thermal X-ray emission? Magnetic filed with nonthermal? upper limit on potential pulsar spin-down power, then see what fraction of that power the lum of J0426 would be, assuming it's at the distance of G150 to see if that's reasonable it being the putative pulsar?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -234,9 +234,34 @@ No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near th
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion and Results}\label{sec:Discuss}
-\subsection{What is it?}\label{sec:What}
+Idk about subsections here, but I have them everywhere else so maybe it's weird to not have them here?
+\subsection{SNR or PWN?}\label{sec:PWNvsSNR}
 
-Why not PWN, radio emission looks more ring/shell like. radio and gamma index are suggestive of SNR, not PWN. GeV matches with radio. no pulsar detected. LAT PWN have broad plateau spectrum, do they extened across the whole energy band? Can I say what edot of the psr would be if I know the LAT flux? 
+The follow-up observations of the \gam{} emission in the direction of \Gone{}, presented here, of the source detected above 50 GeV in 2FHL have led to the detection of an extended \gam{} source whose centroid and radius match extremely well with those of the radio detected SNR. The broad size of the extended source and correlation with the radio shell leave few plausible scenarios for the nature of the GeV emission. \jamie{We argue here that an SNR is favored over a pulsar wind nebulae (PWN) as the generator of the observed \gam{}s.}
+
+One potential scenario is that the \gam{}s in this region are produced by a pulsar wind nebula (PWN) generated by the putative puslar of SNR \Gone{}. The first problem with the PWN hypothesis is that there is no pulsar candidate \jamie{(be it radio, X-ray or \gam{})} detected near the centroid of the SNR to power a PWN. While 3FGL J0425.8+ 5600 is the closest \gam{} source to the center of the remnant, it does not have a pulsar-esque spectrum, it lies about ${\rm 0.25^\circ }$ away, and we showed in $\S$\ref{sec:LATmorph} that with the best-fit disk hypothesis, neither 3FGL J0425.8+ 5600 nor 3FGL J0423.5+5442 are significant in the likelihood model of the region. \psrLike{}, with a spectrum reminiscent of a pulsar,  may actually be one, but as discussed previously, \cite{Barr13} detect no pulsations from the source. Furthermore, the source is $0.84^\circ$ away from the centroid of \Gone{}. Typical pulsar ballistic velocities range from ${\rm V_{PSR} \sim 400-500~km~s^{-1}}$, with extreme velocities exceeding 1000 ${\rm km~s^{-1}}$ \citep{Gaensler06}. If \psrLike{} was the compact remnant of the progenitor star that birthed \Gone{}, it would have to be traveling with a velocity, ${\rm V_{PSR} = 1125  km~s^{-1}}$, making it one of the fastest known pulsars \cite{Chatterjee05} \jamie{Fastest pulsar (till 2011 at least) 1100 km/s, more recent ref?}] \jamie{this assumes the closest distance and youngest age}. Move things around because I haven't discussed distance and age yet? Or maybe that should be done in the HI section? At least distance should be
+
+There's nothing that looks like a PWN in the direction of the \psrLike{}
+
+something about nondetection of xray emission, upper limit in X? GeV SED index don't look like PWN? Not sure this is true.
+
+Despite these reasons, a PWN origin can not be ruled out, due to lack of an associated pulsar.
+
+
+\jamie{it being extended means there aren't many options for what it can be. Lining up so well the \Gone{} lends to thinking it's the SNR, maybe PWN? talk about why Gao, Gebradt don't htink it's the pwn}
+
+Why not PWN, radio emission looks more ring/shell like. radio and gamma index are suggestive of SNR, not PWN (is this true?). GeV matches with radio. no pulsar detected. LAT PWN have broad plateau spectrum, do they extened across the whole energy band? Can I say what edot of the psr would be if I know the LAT flux and xray flux? 
+
+- here's the flux detected from G150
+
+- assuming the derived distance, here's the luminosity
+
+- If it's a PWN does this luminosity suggest a spindown power?
+-or at least what fraction of some reasonable spin down power is this lum?
+
+- If we have an upper limit on the x-ray flux, does the ration of x-ray to gamma suggest a spin down power?
+
+-which paper I was looking at today mentioned the connection between xray lum and psr spin down power? W41 parer does something, but I thought there was another?
 
 I haven't been calling the GeV source \Gone{} this whole time. should I be?
 
@@ -257,7 +282,7 @@ Say something about what the radio index is and the connection to the gev index
 
 Discuss how it compares to other LAT SNRs
 \subsection{Distance Considerations}\label{sec:Dist}
-probably doesn't need to be a different section. 
+Estimate distance in HI section, do age here?
 \subsection{Nonthermal Modeling}\label{sec:naima}
 
 SNR shock fronts are known accelerators of cosmic rays to very high energies. There are potentially multiple radiation mechanisms operating at the shock that produce GeV \gam{}s. Accelerated electrons can give rise to inverse Compton (IC) emission via upscattering of ambient cosmic microwave background (CMB), stellar, and IR photon fields, as well as non-thermal bremsstrahlung radiation. Energetic protons can collide with ambient protons in the surrounding, producing neutral pions which decay into \gam{} photons. 
@@ -286,14 +311,32 @@ Used radio SED from \citep{Gerbrandt14}
 
 \jamie{for thesis, I can get into more details about what the radiation models are doing and what the MCMC sampler does?}
 
-\jamie{naima to do:Add bremss. properly scale the radio flux density. should I be using a power law particle dist function because I have a power law photons spec? increase walker number burn in and runs?Do the energetics make sense? Are there params that I can fix? Kep, B? Any reason to have different n? Liz had doubts about the pp component extending to such high energy, is this really an issue? gtlike finds the best fit index, does the fit value from naima for the particle dist match this? maybe I should fix the particle index based on this? Should the cutoff be the same for e- and p? Do I have to set E0 in naima to 10 GeV for Kep?}
+\jamie{naima to do:Add bremss. properly scale the radio flux density. should I be using a power law particle dist function because I have a power law photons spec? increase walker number burn in and runs?Do the energetics make sense? Are there params that I can fix? Kep, B? Any reason to have different n? Liz had doubts about the pp component extending to such high energy, is this really an issue? gtlike finds the best fit index, does the fit value from naima for the particle dist match this? maybe I should fix the particle index based on this? Should the cutoff be the same for e- and p? Do I have to set E0 in naima to 10 GeV for Kep? LAT RCW 86 uses 512 keV for elec, 1 GeV for PP for min energies and says Kep = 0.01 at 1 GeV/c. Try fixing Kep to 1, 0.1, 0.01, index to 2}
 
 Discuss implications of the naima fits. Do they show preference for lep/had? suggest something about total energy content in particles?
 
+for synchrotron $\alpha = (1-s)/2$, where $\alpha$ is the radio spectral index, and s the electron distribution power law index. Same for IC below break?
+
+SNR cat figure 8 suggests there are only 4(ish) SNRs with an index < 2
+
+eastern shell (Jack called this overall) radio index $\alpha = 0.4 \pm 0.17$  \cite{Gao14}, but $\alpha = 0.69 \pm 0.24$ for the western
+
+For energies below the high energy break
+For pion and bremss $\Gamma = 2\alpha + 1$ (says SNR cat)
+
+For IC, $\Gamma = \alpha + 1 $ ) for positive $\alpha$
+
+From \cite{Gaensler06} Typical indices for PWNe are $\sim -0.3 \lesssim \alpha  \lesssim  0$ in the radio band, and ($\Gamma \approx 2$) in the X-ray band. So $\alpha$ is not inconsistent, but at the boundary.
+
+For puppis A paper, why did they use particle index = gam photon index?
+
+cr abundances at earth kep = 0.01  (Hillas 2005).
+
+Sooo, my index is consistent with either?
 \begin{figure}[!ht]
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{Figures/G150_ICsync_PP_SED.pdf}
-		\caption{ \Gone. Naima SED \jamie{bigger font, get rid of text for each line} }
+		\caption{ \Gone. Naima SED \jamie{bigger font, get rid of text for each line, better colors}}
 			\label{fig:naimaSED}
 	\end{centering}
 \end{figure}
@@ -311,7 +354,7 @@ What can be done in TeV? The difficulty pointed TeV observations are that it mig
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}\label{sec:Conc}
-We analyzed 7 years of \FermiLat{} data in the direction of SNR \Gone{}, lowering the energy threshold from that previously reported in the 2FHL catalog, and report detection of significantly extended \gam{} emission coincident with the entirety of the radio remnant's shell. We find the emission from 1 GeV to 1 TeV to be well described by a power law of spectral index ${\rm 1.82 \pm 0.04}$, with  morphology consistent with a uniform disk with best-fit radius, {\rm $\sigma = 1.40^{\circ} \pm 0.03^{\circ}$}. Something about why we think it's the SNR and what we get from X-ray analysis. To estimate the distance to the SNR, we obtained  an HI spectrum toward \Gone{} from the Leiden/Argentine/Bonn survey of Galactic HI. Calculating distances from the derived HI velocity peaks, we showed that the most reasonable distance estimate places \Gone{} at a distance of ${\rm d = 0.4~kpc}$, making it one of the closest known SNRs detected by the LAT \jamie{how off can this number be? check on the distances of other LAT SNR}. Using this distance and a standard Sedov-Taylor SNR evolution model, we estimate the age of the \Gone{} to be ${\rm T \sim 5~kyr}$ \jamie{same as dist, how much can this be off? and what does that mean for assumptions of what phase of evolution the SNR is in}. To assess the underlying particle population acting in \Gone{} we use the \nai{} Python package to fit the observed radio and \gam{} SED to non-thermal electron and proton radiation models. We find that blah, which suggests more blah. Something about the LAT source fits in with other LAT detected SNRs. End with what  further observations can get us.
+We analyzed 7 years of \FermiLat{} data in the direction of SNR \Gone{}, lowering the energy threshold from that previously reported in the 2FHL catalog, and report detection of significantly extended \gam{} emission coincident with the entirety of the radio remnant's shell. We find the emission from 1 GeV to 1 TeV to be well described by a power law of spectral index ${\Gamma = \rm 1.82 \pm 0.04}$, with  morphology consistent with a uniform disk with best-fit radius, {\rm $\sigma = 1.40^{\circ} \pm 0.03^{\circ}$}. Something about why we think it's the SNR and what we get from X-ray analysis. To estimate the distance to the SNR, we obtained  an HI spectrum toward \Gone{} from the Leiden/Argentine/Bonn survey of Galactic HI. Calculating distances from the derived HI velocity peaks, we showed that the most reasonable distance estimate places \Gone{} at a distance of ${\rm d = 0.4~kpc}$, making it one of the closest known SNRs detected by the LAT \jamie{how off can this number be? SNR catalog says 8 SNRs are withing 1.5 kpc and have some kind of classification in the catalog. These are (closest first) Vela, cygnus loop , Vela Jr, RX J1713, G073, S147, IC443, Monoceros loop, of 0.4 kpc is correct for G150, it's the second closest LAT detected SNR. Even at 1.5 kpc it would be within top 10}. Using this distance and a standard Sedov-Taylor SNR evolution model, we estimate the age of the \Gone{} to be ${\rm T \sim 5~kyr}$ \jamie{same as dist, how much can this be off? and what does that mean for assumptions of what phase of evolution the SNR is in}. To assess the underlying particle population acting in \Gone{} we use the \nai{} Python package to fit the observed radio and \gam{} SED to non-thermal electron and proton radiation models. We find that blah, which suggests more blah. Something about how G150  fits in with other LAT detected SNRs based on age, spectrum. End with what  further observations can get us.
 
 \jamie{thanks?}
 
