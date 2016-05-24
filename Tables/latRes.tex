@@ -2,7 +2,7 @@
 \setlength{\tabcolsep}{0.04in}
 \tablewidth{0pt}
 \tabletypesize{\scriptsize}
-\tablecaption{Extended Analysis Results\label{tab:LATres}}
+\tablecaption{Extended Source Analysis Results\label{tab:LATres}}
 \tablehead{
 \colhead{Spatial Model} & 
 \colhead{TS$_{ext}$} &
@@ -20,14 +20,13 @@
 Disk             &    278.843 &     -32.850 &  49.80  & LMC           & gal   \\
 Elliptical Disk  &    189.048 &      3.033  &  398.64 & IC~443        & snr  \\
 2FHL (free)\tablenotemark{b}  &    260.317 &     -3.277  &  63.87  & Puppis A      & snr    \\
-2FHL (fixed) &    260.317 &     -3.277  &  63.87  & Puppis A      & snr    \\Disk \& 2FHL\tablenotemark{b}     &    260.317 &     -3.277  &  63.87  & Puppis A      & snr    \\
-
+2FHL (fixed) &    260.317 &     -3.277  &  63.87  & Puppis A      & snr    \\Disk \& 2FHL\tablenotemark{b}     &    260.317 &     -3.277  &  63.87  & Puppis A      & snr \\
 %\cutinhead{Thee Point Sources}
 %\sidehead{Uniform Disk}
-
 \enddata
-\tablecomments{~Haven't filled in real numbers for  G150 yet just copied from 2FHL table. Not sure I need this table yet? Other things to add $N_{dof}$, LL, spectral params?}
+\tablecomments{~ 2FHL (free) corresonds to the model where a disk matching \ghard{}, was included in the likelihood model and the spectral and spatial parameters we free to vary. For the 2FHL (fixed) model, \ghard{} was included with spatial parameters fixed. In the Disk \& 2FHL model, we included both the best-fit disk determined in $\S$\ref{sec:LATmorph}, fixed in position and size, and added a source resembling the \ghard{} with free spectral and spatial parameters. This model reports the fit values of \ghard{}
+	\jamie{Haven't filled in real numbers for  G150 yet just copied from 2FHL table.}  \jamie{Other things to add $N_{dof}$, LL, spectral params?}}
 
 \tablenotetext{a}{Calculated in \gtlike}
-\tablenotetext{b}{Started with disk matching the spectral/spatial parameters of \ghard{} and fit them.}
+\tablenotetext{b}{Started with disk matching the spectral/spatial parameters of \ghard{}, then left them free to fit in the likelihood model.}
 \end{deluxetable}

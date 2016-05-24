@@ -9,11 +9,11 @@
 \backcite {Lande12}{{1}{2.1}{subsection.2.1}}
 \backcite {2FHL}{{1}{2.1}{subsection.2.1}}
 \backcite {3FGL}{{1}{2.1}{subsection.2.1}}
-\backcite {2PC}{{2}{2.1}{subsection.2.1}}
+\backcite {2PC}{{1}{2.1}{subsection.2.1}}
 \backcite {Barr13}{{2}{2.2}{subsection.2.2}}
-\backcite {Lande12}{{2}{2.2}{figure.1}}
-\backcite {Gao14}{{2}{2.2}{figure.1}}
-\backcite {2FHL}{{3}{2.2}{figure.1}}
+\backcite {Lande12}{{2}{2.2}{figure.2}}
+\backcite {Gao14}{{2}{2.2}{figure.2}}
+\backcite {2FHL}{{3}{2.2}{figure.3}}
 \backcite {Barr13}{{5}{4.1}{subsection.4.1}}
 \backcite {Gaensler06}{{5}{4.1}{subsection.4.1}}
 \backcite {Chatterjee05}{{5}{4.1}{subsection.4.1}}
@@ -21,6 +21,7 @@
 \backcite {Gao14}{{5}{4.1}{subsection.4.1}}
 \backcite {Gao14}{{5}{4.1}{subsection.4.1}}
 \backcite {Gerbrandt14}{{5}{4.1}{subsection.4.1}}
+\backcite {Hewitt15}{{5}{4.2}{equation.4.1}}
 \backcite {Zabalza15}{{6}{4.3}{subsection.4.3}}
 \backcite {Foreman13}{{6}{4.3}{subsection.4.3}}
 \backcite {Gerbrandt14}{{6}{4.3}{equation.4.2}}
