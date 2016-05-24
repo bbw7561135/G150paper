@@ -132,7 +132,7 @@ In our source model for the region, we included sources from the third \FermiLat
 \subsection{Morphological Analysis}\label{sec:LATmorph}
 Studying the spatial extension of sources with the LAT is non-trivial due to the energy-dependent point spread function (PSF) and strong diffuse emission present in the Galactic plane. Soft spectrum point sources and uncertainties in the diffuse model can act as sources of systematic error when not accurately modeling extended emission as such, particularly at low energies where the PSF is broad. To strike a balance between the best angular resolution and minimal source and diffuse contamination, we restrict our morphological analysis to energies between 1 GeV and 1 TeV. We divide this energy range into 12 \jamie{4bpd} logarithmically spaced bins for both \ptlike~and \gtlike~binned likelihood analyses. 
 
-Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0425.8+ 5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index ${\rm \Gamma = 2.35\pm 0.17}$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, ${\rm \Gamma = 2.63\pm 0.15}$, with no clear multiwavelength source association. Finally, \psrLike{} has a pulsar-like spectrum, yet in a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. This source is located about 0.84$^{\circ}$ from the center of the SNR. We discuss \psrLike{} and potential association with \Gone{} further in $\S$\ref{sec:Dist}). 
+Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0425.8+5600, located approximately 0.6$^\circ$ from the center of the SNR, is the closest of the three sources and is described with a power law spectrum of index ${\rm \Gamma = 2.35\pm 0.17}$  in the 3FGL catalog. The closest radio source to 3FGL J0425.8+5600 is NVSS J042719+560823, at 0.25° away (Ref?). 3FGL J0423.5+5442, exhibits a power law spectral index, ${\rm \Gamma = 2.63\pm 0.15}$, with no clear multiwavelength source association. Finally, \psrLike{} has a pulsar-like spectrum, yet in a timing survey performed with the 100-m  Effelsberg radio telescope, \cite{Barr13} were unable to detect pulsations from the source down to a limiting flux density of $\sim$ 0.1 mJy. This source is located about 0.84$^{\circ}$ from the center of the SNR. We discuss \psrLike{} and potential association with \Gone{} further in $\S$\ref{sec:SNRevo}
 
 In our analysis, we removed 3FGL J0425.8+5600 and 3FGL J0423.5+544 from the RoI, but kept \psrLike{} in the model since preliminary analyses showed clear positive residual emission at the position of the source if it was removed from the RoI. Figure \ref{fig:1GeV_resTSmap} shows a residual TS map for the region around \Gone. This point source detection-significance map was created by placing a point source modeled with a power law of photon index $\Gamma$ = 2  at each pixel and gives the significance of detecting a point source at each location above the background. 
 
@@ -163,14 +163,14 @@ First, we  replaced the ${\rm \sigma = 1.40^{\circ}}$ disk with an another disk 
 
 \input{Tables/latRes.tex}
 
-\begin{figure}[!ht]
-	\begin{centering}
-		\includegraphics[width=\columnwidth]{{G150_extProf_1GeV}.png}
-		\includegraphics[width=\columnwidth]{{TSextVsEn_G150_1GeV_1TeV_sigma1_4}.png}
-		\caption{Not sure I want to include these, replot, get rid of titles, and make them look nicer if I do want to include. Top plot shows that the TS peaks at the best fit extension. Lower plot gives a sense of how significant the extension is (vs a point source) across the analyzed energy range. If I keep, add text in the section
-			\label{fig:extProf}}
-	\end{centering}
-\end{figure}
+%\begin{figure}[!ht]
+%	\begin{centering}
+%		\includegraphics[width=\columnwidth]{{G150_extProf_1GeV}.png}
+%		\includegraphics[width=\columnwidth]{{TSextVsEn_G150_1GeV_1TeV_sigma1_4}.png}
+%		\caption{Not sure I want to include these, replot, get rid of titles, and make them look nicer if I do want to include. Top plot shows that the TS peaks at the best fit extension. Lower plot gives a sense of how significant the extension is (vs a point source) across the analyzed energy range. If I keep, add text in the section
+%			\label{fig:extProf}}
+%	\end{centering}
+%\end{figure}
 
 \begin{figure}[!ht]
 	\begin{centering}
@@ -182,16 +182,16 @@ First, we  replaced the ${\rm \sigma = 1.40^{\circ}}$ disk with an another disk 
 
 \begin{figure}[!ht]
 	\begin{centering}
-		\includegraphics[width=\columnwidth]{{G150.3+4.5_sources}.png}
+		%\includegraphics[width=\columnwidth]{{G150.3+4.5_sources}.png}
 		\includegraphics[width=\columnwidth]{{G150.3+4.5_source}.png}
-		\caption{Should I  include (diffuse subtracted) counts map of the region  to show what the actual counts (not just TS map) like and where the 3FGL sources are? (redo these removing the extended source and including the 3FGL? or 3FGL removed in a diffetent color? Not sure I need these and the TS maps. Redo them as pdf/eps. Remove titles, use same cmap as figure 1, bigger bolder font.
+		\caption{Should I  include (diffuse subtracted) counts map of the region  to show what the actual counts (not just TS map) like and where the 3FGL sources are? (redo these removing the extended source and including the 3FGL? or 3FGL removed in a diffetent color? Not sure I need these and the TS maps. Redo them as pdf/eps. Remove titles, use same cmap as figure 1, bigger bolder font. \jamie{got rid of the upper plot, redo with different color scale, do I have the TS map for these? Or maybe I can just go into pointlike and give it the right cmap and also add in the 2 other 3FGL sources?}
 			\label{fig:1GeV_cmaps}}
 	\end{centering}
 \end{figure}
 %%%%%%
 
 \subsection{Spectral Analysis}\label{sec:LATspec}
-After determining the best fit morphology with \ptlike{} for the GeV emission coincident with SNR \Gone{}, we used those results as a starting point for our \gtlike{} maximum-likelihood fit of the region to estimate the best spectral parameters for our model. The LAT data is well described by a power law from 1 GeV to 1 TeV with a photon index, ${\rm \Gamma = 1.82 \pm 0.04}$, and energy flux above 1 GeV of ${\rm (7.17 \pm 0.73)~ x 10^{-11}~ erg~cm^{-2}~ s^{-1}}$and TS = 389 \jamie{pointlike results were index = 1.80 flux = ${\rm (7.17 \pm 0.73~ x 10^{-11})~ erg~cm^{-2}~ s^{-1}}$}. We tested the \gam{} spectrum of the extended disk for spectral curvature using a log-normal model (Log Parabola), and find no significant deviation from a power law (${\rm \Delta TS \sim 1}$). Figure \ref{fig:G150SED} shows the best-fit power law spectral energy distribution for the GeV source whose morphology was described in Section $\ref{sec:LATmorph}$. Spectral data points were obtained by dividing the energy range into 12 logarithmically spaced bins and modeling the source with a power law of fixed spectra index, ${\rm \Gamma = 2}$.
+After determining the best fit morphology with \ptlike{} for the GeV emission coincident with SNR \Gone{}, we used those results as a starting point for our \gtlike{} maximum-likelihood fit of the region to estimate the best spectral parameters for our model. The LAT data is well described by a power law from 1 GeV to 1 TeV with a photon index, ${\rm \Gamma = 1.82 \pm 0.04}$, and energy flux above 1 GeV of ${\rm (7.3 \pm 0.72)~ x 10^{-11}~ erg~cm^{-2}~ s^{-1}}$  and TS = 389 \jamie{pointlike results were index = 1.80 flux = ${\rm (7.17 \pm 0.73~ x 10^{-11})~ erg~cm^{-2}~ s^{-1}}$}. We tested the \gam{} spectrum of the extended disk for spectral curvature using a log-normal model (Log Parabola), and find no significant deviation from a power law (${\rm \Delta TS \sim 1}$). Figure \ref{fig:G150SED} shows the best-fit power law spectral energy distribution for the GeV source whose morphology was described in Section $\ref{sec:LATmorph}$. Spectral data points were obtained by dividing the energy range into 12 logarithmically spaced bins and modeling the source with a power law of fixed spectra index, ${\rm \Gamma = 2}$.
 
 \jamie{what else to include here? Systematics. Bracketing IRFs, alt iem, try varying the extension? still to be done.}
 
@@ -209,7 +209,7 @@ After determining the best fit morphology with \ptlike{} for the GeV emission co
 \begin{figure}[!ht]
 	\begin{centering}
 		\includegraphics[width=\columnwidth]{Figures/{3FGL_J0426.7+5437_gtlike_defaultBkgRefit_SED}.pdf}
-		\caption{Spectral energy distribution of \psrLike{}. \jamie{Replot this make it look nicer}
+		\caption{Spectral energy distribution of \psrLike{}. \jamie{Replot the G150 SED with this SED overlayed and get rid of this fig}
 			\label{fig:J0426SED}}
 	\end{centering}
 \end{figure}
@@ -234,56 +234,63 @@ No diffuse nonthermal X-ray emission observed by ROSAT. No point sources near th
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion and Results}\label{sec:Discuss}
-Idk about subsections here, but I have them everywhere else so maybe it's weird to not have them here?
 \subsection{SNR or PWN?}\label{sec:PWNvsSNR}
 
-The follow-up observations of the \gam{} emission in the direction of \Gone{}, presented here, of the source detected above 50 GeV in 2FHL have led to the detection of an extended \gam{} source whose centroid and radius match extremely well with those of the radio detected SNR. The broad size of the extended source and correlation with the radio shell leave few plausible scenarios for the nature of the GeV emission. \jamie{We argue here that an SNR is favored over a pulsar wind nebulae (PWN) as the generator of the observed \gam{}s.}
+The follow-up observations of the \gam{} emission in the direction of \Gone{}, presented here, of the source detected above 50 GeV in 2FHL have led to the detection of an extended \gam{} source whose centroid and radius match extremely well with those of the radio detected SNR. The broad size of the extended source and correlation with the radio shell leave few plausible scenarios for the nature of the GeV emission. Namely, the GeV emission can arise from the wind nebula of the putative pulsar of \Gone{} or the GeV emission corresponds to \gam{}s produced in the SNR. We argue here that the SNR is favored over a pulsar wind nebulae (PWN) as the generator of the observed \gam{}s. \jamie{other extended sources, MC? how to}
 
-One potential scenario is that the \gam{}s in this region are produced by a pulsar wind nebula (PWN) generated by the putative puslar of SNR \Gone{}. The first problem with the PWN hypothesis is that there is no pulsar candidate \jamie{(be it radio, X-ray or \gam{})} detected near the centroid of the SNR to power a PWN. While 3FGL J0425.8+ 5600 is the closest \gam{} source to the center of the remnant, it does not have a pulsar-esque spectrum, it lies about ${\rm 0.25^\circ }$ away, and we showed in $\S$\ref{sec:LATmorph} that with the best-fit disk hypothesis, neither 3FGL J0425.8+ 5600 nor 3FGL J0423.5+5442 are significant in the likelihood model of the region. \psrLike{}, with a spectrum reminiscent of a pulsar,  may actually be one, but as discussed previously, \cite{Barr13} detect no pulsations from the source. Furthermore, the source is $0.84^\circ$ away from the centroid of \Gone{}. Typical pulsar ballistic velocities range from ${\rm V_{PSR} \sim 400-500~km~s^{-1}}$, with extreme velocities exceeding 1000 ${\rm km~s^{-1}}$ \citep{Gaensler06}. If \psrLike{} was the compact remnant of the progenitor star that birthed \Gone{}, it would have to be traveling with a velocity, ${\rm V_{PSR} = 1125  km~s^{-1}}$, making it one of the fastest known pulsars \cite{Chatterjee05} \jamie{Fastest pulsar (till 2011 at least) 1100 km/s, more recent ref?}] \jamie{this assumes the closest distance and youngest age}. Move things around because I haven't discussed distance and age yet? Or maybe that should be done in the HI section? At least distance should be
+\jamie{One potential scenario is that the \gam{}s in this region are produced by a pulsar wind nebula (PWN) generated by the putative puslar of SNR \Gone{}.} The first problem with the PWN hypothesis is that there is no pulsar candidate detected near the centroid of the SNR to power a PWN. While 3FGL J0425.8+5600 is the closest \gam{} source to the center of the remnant, it does not have a pulsar-esque spectrum, it lies about ${\rm 0.25^\circ }$ away, and we showed in $\S$\ref{sec:LATmorph} that with the best-fit disk hypothesis, neither 3FGL J0425.8+5600 nor 3FGL J0423.5+5442 are significant in the likelihood model of the region. \psrLike{}, with a spectrum reminiscent of a pulsar,  may actually be one, but as discussed previously, \cite{Barr13} detect no pulsations from the source. Furthermore, the source is $0.84^\circ$ away from the centroid of \Gone{}. Typical pulsar ballistic velocities range from ${\rm V_{PSR} \sim 400-500~km~s^{-1}}$, with extreme velocities exceeding ${\rm 1000~km~s^{-1}}$ \citep{Gaensler06}. If \psrLike{} was the compact remnant of the progenitor star that birthed \Gone{}, it would have to be traveling with a velocity, ${\rm V_{PSR} = 1125~km~s^{-1}}$ (assuming an age of 5 kyr, which we derive in the following section, $\S$\ref{sec:SNRevo}), and would make it one of the fastest known pulsars \citep{Chatterjee05}. While possible, this scenario is unlikely without further evidence to support such a high velocity. \jamie{Fastest pulsar (till 2011 at least) 1100 km/s, more recent ref?}]
 
-There's nothing that looks like a PWN in the direction of the \psrLike{}
+Another argument disfavoring the PWN scenario is that, despite the hard \gam{} spectral index extending to TeV energies, ROSAT X-ray observations detect no significant emission suggestive of a PWN in the direction of \Gone{} (see $\S$\ref{sec:Xray}). Typical PWNe spectral indices range from about $-0.3 \lesssim \alpha  \lesssim  0$ \citep{Gaensler06}. The radio spectral index  as determined in \cite{Gao14}  ($\alpha = 0.4 \pm 0.17$ for part of the eastern shell, $\alpha = 0.69 \pm 0.24$ for a region in western shell) suggests that the radio object is likely not a PWN.
 
-something about nondetection of xray emission, upper limit in X? GeV SED index don't look like PWN? Not sure this is true.
+\jamie{When I have the xray flux, Can I say what edot of the psr would be if I know the LAT flux and xray flux? here's the flux detected from G150... assuming the derived distance, here's the luminosity...If it's a PWN does this luminosity suggest a spindown power?...or at least what fraction of some reasonable spin down power is this lum?...If we have an upper limit on the x-ray flux, does the ration of x-ray to gamma suggest a spin down power?...which paper I was looking at today mentioned the connection between xray lum and psr spin down power? W41 parer does something, but I thought there was another? Look at Dan's W41 too, and MSH 11-61A something like Mattana et al. 2009 correlation between  $\mathrm{flux_x / flux_g \propto}$   Edot?} 
+	
+Many of the arguments disfavoring the PWN hypothesis in fact bolster that of SNR. First and foremost in favor of an SNR origin for the \gam{} emission is the excellent agreement between the GeV best-fit disk radius and centroid with that of the radio shell.  The radio shell-like appearance, non-thermal radio spectrum, and strands of red optical filamentary structures led both \cite{Gao14} and \cite{Gerbrandt14} to regard the radio source an SNR as opposed to a PWN.  The radio spectral index, while not quite in line with typical PWN spectra, is actually  common of SNRs.
 
-Despite these reasons, a PWN origin can not be ruled out, due to lack of an associated pulsar.
+While the above factors lend credence to an SNR origin for the GeV \gam{}s the PWN  scenario can not be ruled out due to the lack of an associated pulsar. Regardless, for the remainder of this study, we assumed the observed\gam{}s were produced in the shock front of SNR \Gone{}
 
+\subsection{\Gone{} in Context }\label{sec:SNRevo}
 
-\jamie{it being extended means there aren't many options for what it can be. Lining up so well the \Gone{} lends to thinking it's the SNR, maybe PWN? talk about why Gao, Gebradt don't htink it's the pwn}
+Having associated the \gam{} emission with \Gone{}, next, we assessed the evolutionary state of the remnant to place it in context within the current population of LAT SNRs. Using the most viable HI kinematic distance, ${\rm d  \approx 0.38~kpc}$ derived in $\S$\ref{sec:HI}, we showed that the projected radius of \Gone{} is ${\rm R \approx 9.4~pc}$. Employing a standard Sedov-Taylor solution for the expansion of a blast wave, we estimated the age of \Gone{}. In the Sedov phase, the radius of the shock front is given by,
 
-Why not PWN, radio emission looks more ring/shell like. radio and gamma index are suggestive of SNR, not PWN (is this true?). GeV matches with radio. no pulsar detected. LAT PWN have broad plateau spectrum, do they extened across the whole energy band? Can I say what edot of the psr would be if I know the LAT flux and xray flux? 
+%\begin{equation}
+%/R_{12.5} = \bigg{(}\frac{E_{51}}{n_0} \bigg{)}^{1/5} t_4^{2/5}
+%\end{equation}
 
-- here's the flux detected from G150
+\begin{equation} \label{eq:ST}
+R_{ST} = 0.314 \bigg{(}\frac{E_{51}}{n_0} \bigg{)}^{1/5} t_{{\rm yr}}^{2/5} {\rm  pc}
+\end{equation}
 
-- assuming the derived distance, here's the luminosity
+Where ${\rm E_{51}}$ is the kinetic energy output of the  supernova in units of ${\rm 10^{51}~erg}$, and ${\rm n_0}$ the ambient density the shock is expanding into in units of ${\rm cm^{-3}}$. Assuming standard values of 1 for ${\rm E_{51}}$ and ${\rm n_0}$ we solved equation \ref{eq:ST} for ${\rm t_{yr}}$ (the current age of the remnant in years) and used the value of R derived for \Gone{} to estimate the age of the SNR as ${\rm t \approx 4.9~kyr}$.\jamie{Figures \ref{fig:LATseds} and \ref{fig:LvsD2} demonstrate how the properties of \Gone{} compare to those of other LAT SNRs of various age.}
 
-- If it's a PWN does this luminosity suggest a spindown power?
--or at least what fraction of some reasonable spin down power is this lum?
+Figure \ref{fig:LATseds} shows the SED of \Gone{} overlaid on the spectra of a selection of other LAT observed SNRs with ages ranging from ${\rm\sim  10^3 - 10^4 yr}$. \Gone{} exhibits a hard spectrum extending to TeV energies with no spectral break (breaks are commonly seen in LAT SNRs interacting with nearby molecular material (ref?)) and appears spectrally similar to the younger SNRs like RX J1713.7-3946 and RX J0852.0-4622. In figure \ref{fig:LvsD2}, we plotted the luminosity of several LAT SNRs against their squared diameters (a proxy for age, as evident from equation \ref{eq:ST}). \jamie{maybe I really should be using SNR cat fig 18. need to reword things if I'm just taking their figure and putting my point on}. Similarly, with it's low luminosity, \Gone{} appears to correlate well with the younger sect of LAT SNRs.
+Our age estimate alone does not unambiguously determine the evolutionary state of \Gone{}. However, when combined with the results of Figures \ref{fig:LATseds} and \ref{fig:LvsD2} comparing \Gone{} to the population of other LAT SNRs, it hints that \Gone{} is more compatible with a dynamically unevolved, non-interacting (with the surrounding interstellar medium) stage of expansion.
 
-- If we have an upper limit on the x-ray flux, does the ration of x-ray to gamma suggest a spin down power?
+\jamie{ couple of sentence describing the spetrum of G150 and how it looks more like that of Vela Jr, Rx J1714, and how it shows no signs of a break at GeV energies like the interacting SNRs. hard plus no break looks young}.
+ 
+%\jamie{The age of an SNR in the Sedov phase is not always an unambiguous determinant of the remnants evolutionary phase. An age of ${\rm \sim 5~kyr}$, falls into this grey area straddling the so-called young (${\rm few \times 10^3 yr}$) middle-aged (${\rm  few \times 10^4 yr}$)}  In Figure $\S$\ref{fig:LATseds}, we show the SED of \Gone{} overlaid on a representative sample of SEDs of other LAT observed SNRs with ages ranging from ${\rm\sim  10^3 - 10^4 yr}}$. 
 
--which paper I was looking at today mentioned the connection between xray lum and psr spin down power? W41 parer does something, but I thought there was another?
+\begin{figure}[!ht]
+	\begin{centering}
+		\includegraphics[width=\columnwidth]{Figures/{G150_SEDall_overlay}.png}
+		\caption{SEDs for several LAT observed SNRs with ages spanning ${\rm\sim  10^3 - 10^4 yr}$. The GeV spectrum of  \Gone{} is shown as stars.  \jamie{For now. Replot with white bkg, bigger font, lines, change colors/shapes? get rid of 2FHL, less, different SNRs? I need refs for each}
+			\label{fig:LATseds}}
+	\end{centering}
+\end{figure}
 
-I haven't been calling the GeV source \Gone{} this whole time. should I be?
+\begin{figure}[!ht]
+	\begin{centering}
+		\includegraphics[width=\columnwidth]{Figures/{G150_LvsD2_60pc}.pdf}
+		\caption{Luminosity of vs diam square, took from W41 overplotted G150 \jamie{Should I actually remake this myself?}
+			\label{fig:LvsD2}}
+	\end{centering}
+\end{figure}
 
-Size + HI suggest that near distance corresponding to different HI velocities suggest it's aged, spectrum looks more like young SNR (hard + no GeV break ). Is it a weird young remnant or weird aged one? Leptonic dominated if young, hadronic dominated if older? Something about nearby dense clouds masking hadronic emission? Maybe this is only true for MeV cosmic rays that are screened out though and it would only mask the pion bump, but not this higher energy emission?
+\jamie{how to factor errors into all these calcs? necessary?}
 
-PWN or SNR. Can we rule out PWN? See W41 paper, MSH 11-61A, Fabios recent G326 work (no, he just tries to use the PSF types and testing different model templates to try to disentangle SNR from PWN)?
-
-
-No PSR candidate near center (should it be near the center? Depends on age)
-Is there some limit we can place on the PWN based on not seeing the pulsar? Like on Edot? OR something like Mattana et al. 2009 correlation between  $\mathrm{flux_x / flux_g \propto}$   Edot? 
-
-Assume it's in Sedov phase based on size + near distance, and calculate age, upper limit on Edot base on lack of x-ray flux? Or maybe if I assume the sources is the PWN and GeV radius is PWN radius, then can I estimate Edot based on size and evolution inside  SNR?
-
-If we assume close distance, age is only $\approx$ 5kyr, maybe this is a transitional SNR? What do others like this look like? Puppis A? Gamma Cygni is a similar age too.something 
-
-Say something about what the radio index is and the connection to the gev index
-\jamie{remake the G150 all SNR SEDs with the new gtlike data points}
-
-Discuss how it compares to other LAT SNRs
-\subsection{Distance Considerations}\label{sec:Dist}
-Estimate distance in HI section, do age here?
+\jamie{other reasonable values for n, E? Lower n would result in younger age, explosion could expand quicker}
+ 
 \subsection{Nonthermal Modeling}\label{sec:naima}
+
 
 SNR shock fronts are known accelerators of cosmic rays to very high energies. There are potentially multiple radiation mechanisms operating at the shock that produce GeV \gam{}s. Accelerated electrons can give rise to inverse Compton (IC) emission via upscattering of ambient cosmic microwave background (CMB), stellar, and IR photon fields, as well as non-thermal bremsstrahlung radiation. Energetic protons can collide with ambient protons in the surrounding, producing neutral pions which decay into \gam{} photons. 
 
@@ -291,10 +298,10 @@ To infer the properties of the underlying relativistic particle populations in t
 
 To determine the best fit parameters, \nai{} calls \emc{} to sample the log-likelihood function (i.e.,  the likelihood of the observed data given the assumed spectrum) of the radiative model. The radiative models require as input a particle distribution function to model the present-age electron or proton spectrum. \nai{} inherently assumes a one-zone, homogeneous distribution, and we scaled the likelihood function by a uniform prior probability distribution. For this work, we model the particle spectra as power laws with an exponential cut off,
 
-\begin{equation}
-{\rm \frac{dN}{dE}_{e,p} = A_{e,p} (E / E_0) ^{-\alpha} \exp {\bigg ( }\frac{- E}{ E_{cutoff}}{\bigg)}}
+\begin{equation}\label{eq:ecpl}
+{\rm \frac{dN}{dE}_{(e,p)} = A_{(e,p)} (E / E_0) ^{-s} \exp {\bigg ( }\frac{- E}{ E_{cutoff~(e,p)}}{\bigg)}}
 \end{equation}
-where E is the particle energy, ${\rm E_0}$ the reference energy, $\alpha$ the spectral index, and ${\rm E_{cutoff}}$ the cutoff energy. The electron distribution's normalization is related to the proton normalization through the electron-to-proton ratio scaling factor, $A_e = K_{ep} A_p$. We also assume that the electron and proton distributions have the same spectral shape.
+where E is the particle energy, ${\rm E_0}$ the reference energy, s the spectral index, and ${\rm E_{cutoff}}$ the cutoff energy. The electron distribution's normalization is related to the proton normalization through the electron-to-proton ratio scaling factor, $A_e = K_{ep} A_p$. We also assume that the electron and proton distributions have the same spectral shape.
 
 In our spectral model, we assume a gas density, ${\rm n_0 = 1~cm^{-3}}$ for proton-proton \jamie{and bremss when I get it working} interactions For IC emission, we include CMB  
 Talk about free/ fixed params of the model, reference the table, and figure to show best fit, discuss results and what the fits imply regarding lep/had dom and energy in e- p.
@@ -305,11 +312,14 @@ Used radio SED from \citep{Gerbrandt14}
 \input{Tables/naima.tex}
 
 
-\jamie{should I include what the like function looks like here?}
+\jamie{should I include what the likelihood function looks like here?}
 
 \jamie{estimates min of negative loglike through sampling}	
 
 \jamie{for thesis, I can get into more details about what the radiation models are doing and what the MCMC sampler does?}
+
+\jamie{Say something about what the radio index is and the connection to the gev index}
+\jamie{use ratio of \gam{} to radio flux to set kep, assuming it's hadron dom?}
 
 \jamie{naima to do:Add bremss. properly scale the radio flux density. should I be using a power law particle dist function because I have a power law photons spec? increase walker number burn in and runs?Do the energetics make sense? Are there params that I can fix? Kep, B? Any reason to have different n? Liz had doubts about the pp component extending to such high energy, is this really an issue? gtlike finds the best fit index, does the fit value from naima for the particle dist match this? maybe I should fix the particle index based on this? Should the cutoff be the same for e- and p? Do I have to set E0 in naima to 10 GeV for Kep? LAT RCW 86 uses 512 keV for elec, 1 GeV for PP for min energies and says Kep = 0.01 at 1 GeV/c. Try fixing Kep to 1, 0.1, 0.01, index to 2}
 
@@ -317,7 +327,7 @@ Discuss implications of the naima fits. Do they show preference for lep/had? sug
 
 for synchrotron $\alpha = (1-s)/2$, where $\alpha$ is the radio spectral index, and s the electron distribution power law index. Same for IC below break?
 
-SNR cat figure 8 suggests there are only 4(ish) SNRs with an index < 2
+SNR cat figure 8 suggests there are only 4(ish) SNRs with an index less than 2
 
 eastern shell (Jack called this overall) radio index $\alpha = 0.4 \pm 0.17$  \cite{Gao14}, but $\alpha = 0.69 \pm 0.24$ for the western
 
@@ -343,7 +353,9 @@ Sooo, my index is consistent with either?
 
 Another section here? The last thing I want to do is say something about what further observations are necessary to get at any unanswered questions. 
 
-Deeper x-ray observations to search for the compact stellar remnant. 
+looks like young SNRs, but no x-ray and lower luminosity than most other LAT SNRs
+
+Deeper x-ray observations to search for the compact stellar remnant. ROSAT all-sky not that sensitive, dedicated X-ray to search for thermal/nonthermal components
 
 What can be done in TeV? The difficulty pointed TeV observations are that it might be difficulty for them to detect such broadly extended emission (why? I know they'd have to tile their observations, but there's something inherently difficulty for them about observing large extended sources. Is it just that the emission is spread out so it might be faint and below the detection threshold?). What about HAWC? Why does it not detect the emission that Fermi clearly shows extending to VHE energies? Is it not as sensitive at this energy for some reason? HAWC energy range extends to 100 GeV.
 
@@ -354,10 +366,24 @@ What can be done in TeV? The difficulty pointed TeV observations are that it mig
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}\label{sec:Conc}
-We analyzed 7 years of \FermiLat{} data in the direction of SNR \Gone{}, lowering the energy threshold from that previously reported in the 2FHL catalog, and report detection of significantly extended \gam{} emission coincident with the entirety of the radio remnant's shell. We find the emission from 1 GeV to 1 TeV to be well described by a power law of spectral index ${\Gamma = \rm 1.82 \pm 0.04}$, with  morphology consistent with a uniform disk with best-fit radius, {\rm $\sigma = 1.40^{\circ} \pm 0.03^{\circ}$}. Something about why we think it's the SNR and what we get from X-ray analysis. To estimate the distance to the SNR, we obtained  an HI spectrum toward \Gone{} from the Leiden/Argentine/Bonn survey of Galactic HI. Calculating distances from the derived HI velocity peaks, we showed that the most reasonable distance estimate places \Gone{} at a distance of ${\rm d = 0.4~kpc}$, making it one of the closest known SNRs detected by the LAT \jamie{how off can this number be? SNR catalog says 8 SNRs are withing 1.5 kpc and have some kind of classification in the catalog. These are (closest first) Vela, cygnus loop , Vela Jr, RX J1713, G073, S147, IC443, Monoceros loop, of 0.4 kpc is correct for G150, it's the second closest LAT detected SNR. Even at 1.5 kpc it would be within top 10}. Using this distance and a standard Sedov-Taylor SNR evolution model, we estimate the age of the \Gone{} to be ${\rm T \sim 5~kyr}$ \jamie{same as dist, how much can this be off? and what does that mean for assumptions of what phase of evolution the SNR is in}. To assess the underlying particle population acting in \Gone{} we use the \nai{} Python package to fit the observed radio and \gam{} SED to non-thermal electron and proton radiation models. We find that blah, which suggests more blah. Something about how G150  fits in with other LAT detected SNRs based on age, spectrum. End with what  further observations can get us.
+We analyzed 7 years of \FermiLat{} data in the direction of SNR \Gone{}, lowering the energy threshold from that previously reported in the 2FHL catalog, and report detection of significantly extended \gam{} emission coincident with the entirety of the radio remnant's shell. We find the emission from 1 GeV to 1 TeV to be well described by a power law of spectral index ${\Gamma = \rm 1.82 \pm 0.04}$, with  morphology consistent with a uniform disk with best-fit radius, {\rm $\sigma = 1.40^{\circ} \pm 0.03^{\circ}$}. Something about why we think it's the SNR and what we get from X-ray analysis. To estimate the distance to the SNR, we obtained  an HI spectrum toward \Gone{} from the Leiden/Argentine/Bonn survey of Galactic HI. Calculating distances from the derived HI velocity peaks, we showed that the most reasonable distance estimate places \Gone{} at a distance of ${\rm d = 0.4~kpc}$, making it one of the closest known SNRs detected by the LAT \jamie{how off can this number be? SNR catalog says 8 SNRs are withing 1.5 kpc and have some kind of classification in the catalog. These are (closest first) Vela, cygnus loop , Vela Jr, RX J1713, G073, S147, IC443, Monoceros loop. if 0.4 kpc is correct for G150, it's the second closest LAT detected SNR. Even at 1.5 kpc it would be within top 10}. Using this distance and a standard Sedov-Taylor SNR evolution model, we estimate the age of the \Gone{} to be ${\rm t \sim 5~kyr}$ \jamie{same as dist, how much can this be off? and what does that mean for assumptions of what phase of evolution the SNR is in}. To assess the underlying particle population acting in \Gone{} we use the \nai{} Python package to fit the observed radio and \gam{} SED to non-thermal electron and proton radiation models. We find that blah, which suggests more blah. Something about how G150  fits in with other LAT detected SNRs based on age, spectrum. End with what  further observations can get us.
 
 \jamie{thanks?}
 
+\section{Scratch}
+
+${\rm L_{\gamma} = 1.3 \times 10^{33}~erg~s^{-1}}$ from 1 GeV to 1 TeV for best d and flux above
+
+
+energy flux from 100 MeV to 100 GeV: ${\rm 4.84 \times 10^{-11}~erg~cm^{-2}~s^{-1}} $
+
+${\rm L_{\gamma} = 8.6 \times 10^{32}~erg~s^{-1}}$ from 100 MeV to 100 GeV for best d and flux in same range
+
+energy flux from 1 GeV to 100 GeV: ${\rm 3.83 \times 10^{-11}~erg~cm^{-2}~s^{-1}} $
+
+${\rm L_{\gamma} = 6.8 \times 10^{32}~erg~s^{-1}}$ from 1 geV to 100 GeV for best d and flux in same range
+
+For diamMax = 60pc, dmax = 1.22kpc, and Lmax (100mev-100GeV) = 8.7e+33
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`%%%%%%
 %
 %         bib
