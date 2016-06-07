@@ -54,6 +54,7 @@
 \newcommand{\ghard}{2FHL J0431.2+5553e}
 
 
+
 \shorttitle{\FermiLat{}SNR G150.3+4.5}
 \shortauthors{Cohen, Castro, Hays, Hewitt }
 \slugcomment{}
@@ -86,7 +87,6 @@ We report here a dedicated analysis of the \gam{} emission around supernova remn
 %\keywords{catalogs -- gamma rays: general}
 \keywords{Supernova Remnants, \g-rays, Cosmic rays, Radio}
 
-%do I need maketitle here? 
 %\maketitle
 %\clearpage
 
@@ -97,20 +97,14 @@ We report here a dedicated analysis of the \gam{} emission around supernova remn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction} 
-\jamie{not ready yet} Supernova remnants have long been thought to be the primary accelerators of cosmic rays up to the knee of the cosmic-ray energy spectrum. 
+SNRs have long been thought to be the most-likely accelerators of cosmic rays (CRs) up to the knee of the CR energy spectrum, with diffusive shock acceleration being the primary mechanism accelerating the charged particles to \gam{} emitting energies (see \cite{Reynolds08} for a review of  SNRs from X-rays to \gam{}s ). \Fermi{}-LAT was instrumental \jamie{pun!} in demonstrating that CR protons can indeed be accelerated by SNR shock fronts (through detection of the characteristic "pion bump" feature), and are capable of generate the observed \gam{} emission in SNRs \citep{W44pion, Jogler16}. In addition, observations of SNRs with the LAT have proven to be vital in uncovering a large swath of the \gam{} SNR population; both evolved SNRs interacting with dense surrounding material, as well as dynamically young remnants useful for probing acceleration directly at the shock \citep{snrCat}. 
 
-something about the benefit of Pass 8 extending the viable LAT energy range for analysis to TeV energies and what that affords us in closing the gap between GeV and TeV.
+The recently updated Pass 8 event reconstruction provides a significantly improved angular resolution,  acceptance, and background event rejection \citep{atwood13b,atwood13}, all of which lead to an increase in the effective energy range and sensitivity of the LAT. Leveraging the increased sensitivity afforded by Pass 8 data, \cite{2FHL} performed an all-sky analysis from 50 GeV to 2 TeV (referred to as the second catalog of hard \Fermi{}-LAT sources, or 2FHL ), directly connecting GeV LAT observations  with those of ground-based Chernkov telescopes at higher energies. With it's all-sky survey mode and wide field of view (FOV), that LAT is better suited for detecting broadly extended sources across the sky compared to a Cherenkov telescope operating under pointed observations \jamie{bad to be negative about IACTs?}. The 2FHL catalog detected significant spatial extension from 31 sources above 50 GeV, 5 of which had not previously been detected as extended.
 
-Something about LAT being all sky and easier to detect broadly extended sources than for TeV?
+Of particular interest, one of the 5 blindly detected sources, 2FHL J0431.2+5553e, was a large extended source  (modeled as a uniform disk with radius, ${\rm \sigma = 1.27^\circ \pm 0.04^\circ}$), exhibiting a hard power-law spectral index ($\Gamma = 1.66 \pm 0.20$). This 2FHL source was found to be coincident with a recently detected radio SNR, \Gone{}. Faint emission from the eastern portion of the shell of \Gone{} was first reported in \cite{Gerbrandt14} (called G150.8+3.8), and considered a strong SNR candidate due to the semi-circular shape of the emission, clearly non-thermal spectrum, and the presence of red optical filamentary structures. \cite{Gao14} performed follow-up observations of the region using Urumqi 6 cm survey data (as well as Effelbserg 11cm and 21cm data and CGPS 1420 MHz and 408 MHz observations), taking advantage of the survey's extended Galactic latitude range, up to b=20$^\circ$. They reported clear detection of a 2.5$^\circ$ wide by 3$^\circ$ high, synchrotron emitting, shell-like object (\Gone{}),  bolstering an SNR origin for the radio emission.
 
-2FHL blindly detected
-
-faint radio \citep{Gao14}, \cite{Gerbrandt14}
-
-what to say about radio SNRs? Connect CRs to nonthermal emission and the LAT and 
-Something about SNRs, cosmic ray accelerators, radio detections, connection between radio-LAT observations, G150 detection, 2FHL blind detection and SNRs at TeV (all young?)
-
-We describe the LAT and analysis results in $\S$\ref{sec:LATobs}, detail
+2FHL J0431.2+5553e only partially overlaps the northern region of \Gone{}, so the nature of the extended source is uncertain. In this paper, we perform an in depth study of the \gam{} emission in the direction of SNR \Gone{}, extending the energy from 50 GeV in 2FHL, down to 1 GeV.  We report here  detection of  a significantly extended source whose extent matches well with that of \Gone{}. We explore the spectral and spatial properties of this \gam{} source, employ archival HI and X-ray observations, and model the broadband emission from the source
+to constrain the origin of the GeV emission and understand the connection between the radio detected source \Gone{} and the \gam{} one. We describe the LAT and analysis results in $\S$\ref{sec:LATobs}, detail
 multiwavelength observations in $\S$\ref{sec:Multiwave}, and discuss various emission origin scenarios in $\S$\ref{sec:Discuss}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -121,7 +115,7 @@ multiwavelength observations in $\S$\ref{sec:Multiwave}, and discuss various emi
 \subsection{Data Set and Reduction}\label{sec:LATdata}
 \FermiLat is a pair conversion telescope sensitive to high energy \gam{}s  from 20 MeV to greater than 1 TeV \citep{2FHL}, operating primarily in a sky-survey mode which views  the entire sky every 3 hours. The LAT has a wide field of view ($\sim$2.4 sr), a large effective area of $\sim$8200 cm$^2$ above 1 GeV for on axis events and a  68\% containment radius angular resolution  of $\sim$0.8$^\circ$  at 1 GeV. For further details  on the instrument and its performance see \cite{atwood09} and \cite{lat_perf}.
 
-In this analysis, we  analyzed 7 years of Pass 8 data, from August 2nd 2008  to August 2nd 2015. The Pass 8 event reconstruction provides a significantly improved angular resolution \jamie{this is sadly unimportant unless I'm at higher energy or using the PSF types. The P8 total PSF at 1 GeV is about the same as for P7REP. It's the acceptance/effective area that are considerably better at this energy}, acceptance, and background event rejection \citep{atwood13b,atwood13}, all of which lead to an increase in the effective energy range and sensitivity of the LAT. Source class events were analyzed within a 14$^\circ$x14$^\circ$ region centered on SNR \Gone~using the P8R2\_SOURCE\_V6 instrument response functions, with a pixel size of 0.1$^{\circ}$. To reduce contamination from earth limb \gam{}s, only events with zenith angle less than 100$^{\circ}$ were included.
+In this analysis, we  analyzed 7 years of Pass 8 data, from August 2nd 2008  to August 2nd 2015. Source class events were analyzed within a 14$^\circ$x14$^\circ$ region centered on SNR \Gone~using the P8R2\_SOURCE\_V6 instrument response functions, with a pixel size of 0.1$^{\circ}$. To reduce contamination from earth limb \gam{}s, only events with zenith angle less than 100$^{\circ}$ were included.
 
 For spectral and spatial analysis we utilized both the standard \Fermi{} Science Tools (version 10-01-01)\footnote[1]{\url{http://fermi.gsfc.nasa.gov/ssc/}}, and the binned maximum likelihood package \ptlike~\citep{Kerr10}. \ptlike~provides methods for simultaneously fitting the spectrum, position, and spatial extension of a source, and was extensively validated in \cite{Lande12}. Both packages fit a source model, the Galactic diffuse emission, and an isotropic component (which accounts for the background of misclassified charged particles and the extragalactic diffuse \gam{}  background)\footnote[2]{\url{http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html}} to the observations. In this analysis, we used the standard Galactic diffuse ring-hybrid model scaled for Pass 8 analysis, gll{\_}iem{\_}v06.fits (modulated by a power law function with free index and normalization), and for the isotropic emission,  we used iso{\_}P8R2{\_}SOURCE{\_}V6{\_}v06.txt, extrapolated to 2 TeV as in \cite{2FHL}.
 
