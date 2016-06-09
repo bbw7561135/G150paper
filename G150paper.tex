@@ -129,8 +129,8 @@ Three  unidentified 3FGL sources are located within the extent of \Gone. 3FGL J0
 \begin{figure}[!ht]
 	\begin{centering}
 		%\includegraphics[width=\columnwidth]{{G150.3+4.5_sources}.png}
-		\includegraphics[width=\columnwidth]{{G150.3+4.5_source}.png}
-		\caption{Smoothed background subtracted residual counts map above 1 GeV with 0.1$^\circ$x 0.1$^\circ$ pixels, centered on SNR \Gone. \psrLike{} and the diffuse backgrounds are included in the region model, 3FGL J0425.8+5600 and 3FGL J0423.5+5442 are not. Inset shows the size of the PSF above 1 GeV, demonstrating the \gam{} emission is extended well beyond the extent of the inset PSF.  \jamie{add more description after i remake the map. Add the other 2 3FGL sources? The point of this is to give an sense of what our model thinks the GeV emission from the SNR looks like remove the extended source?   3FGL removed in a diffetent color?  Remove titles, use same cmap as figure 1, bigger bolder font.}
+		\includegraphics[width=\columnwidth]{G150_1GeV_source_w3FGL_noLabs.pdf}
+		\caption[Smoothed background subtracted residual counts map above 1 GeV for \Gone{}]{Smoothed background subtracted residual counts map above 1 GeV with 0.1$^\circ$x 0.1$^\circ$ pixels, centered on SNR \Gone. \psrLike{} and the diffuse backgrounds are included in the region model, 3FGL J0425.8+5600 and 3FGL J0423.5+5442 are not (but their locations are shown as white crosses). %Inset shows the size of the PSF above 1 GeV, demonstrating the \gam{} emission is extended well beyond the extent of the inset PSF
 			\label{fig:1GeV_cmaps}}
 	\end{centering}
 \end{figure}
@@ -177,13 +177,13 @@ First, we  replaced the ${\rm \sigma = 1.40^{\circ}}$ disk with an another disk 
 %%%%%%
 
 \subsection{Spectral Analysis}\label{sec:LATspec}
-After determining the best fit morphology with \ptlike{} for the GeV emission coincident with SNR \Gone{}, we used those results as a starting point for our \gtlike{} maximum-likelihood fit of the region to estimate the best spectral parameters for our model. The LAT data is well described by a power law from 1 GeV to 1 TeV with a photon index, ${\rm \Gamma = 1.82 \pm 0.04}$, and energy flux above 1 GeV of ${\rm (7.3 \pm 0.72)~ x 10^{-11}~ erg~cm^{-2}~ s^{-1}}$  and TS = 389 \jamie{pointlike results were index = 1.80 flux = ${\rm (7.17 \pm 0.73~ x 10^{-11})~ erg~cm^{-2}~ s^{-1}}$}. We tested the \gam{} spectrum of the extended disk for spectral curvature using a log-normal model (Log Parabola), and find no significant deviation from a power law (${\rm \Delta TS \sim 1}$). Figure \ref{fig:G150SED} shows the best-fit power law spectral energy distribution for the GeV source whose morphology was described in Section $\ref{sec:LATmorph}$. Spectral data points were obtained by dividing the energy range into 12 logarithmically spaced bins and modeling the source with a power law of fixed spectra index, ${\rm \Gamma = 2}$. We over plotted the SED of \psrLike{}, to demonstrate how the spectra of the two sources would grow more confused at energies below 1 GeV \jamie{Need to remake Fig 1 with J0426}.
+After determining the best fit morphology with \ptlike{} for the GeV emission coincident with SNR \Gone{}, we used those results as a starting point for our \gtlike{} maximum-likelihood fit of the region to estimate the best spectral parameters for our model. The LAT data is well described by a power law from 1 GeV to 1 TeV with a photon index, ${\rm \Gamma = 1.82 \pm 0.04}$, and energy flux above 1 GeV of ${\rm (7.3 \pm 0.72)~ x 10^{-11}~ erg~cm^{-2}~ s^{-1}}$  and TS = 389 \jamie{pointlike results were index = 1.80 flux = ${\rm (7.17 \pm 0.73~ x 10^{-11})~ erg~cm^{-2}~ s^{-1}}$}. We tested the \gam{} spectrum of the extended disk for spectral curvature using a log-normal model (Log Parabola), and find no significant deviation from a power law (${\rm \Delta TS \sim 1}$). Figure \ref{fig:G150SED} shows the best-fit power law spectral energy distribution for the GeV source whose morphology was described in Section $\ref{sec:LATmorph}$. Spectral data points were obtained by dividing the energy range into 12 logarithmically spaced bins and modeling the source with a power law of fixed spectra index, ${\rm \Gamma = 2}$. We overplotted the SED of \psrLike{} to demonstrate how the spectra of the two sources are comparable in the lowest energy bin and would grow more confused at energies below 1 GeV.
 
 %%%G150 pointlike SED: G150_1GeV_resTsmap_radio_noLabs.pdf
 \begin{figure}[!ht]
 	\begin{centering}
-		\includegraphics[width=\columnwidth]{Figures/{G150.3+4.5_gtlikeNewSED}.pdf}
-		\caption{Spectral energy distribution for the extended source coincident with SNR \Gone{} from 1 GeV to 1 TeV. Red line corresponds to the best fit power law model. Crosses are shown with with statistical error bars. Grey dashed line is the SED of \psrLike{}, modeled with an exponential cut-off power law. \jamie{need to remake this and actually add J0426]} 
+		\includegraphics[width=\columnwidth]{Figures/{G150_J0426_SED}.pdf}
+		\caption[Spectral energy distribution of \Gone{} and \psrLike{}]{Spectral energy distribution for the extended source coincident with SNR \Gone{} from 1 GeV to 1 TeV. Red line corresponds to the best-fit power law model. Points are shown with with statistical error bars. Grey dashed line is the SED of \psrLike{}, modeled with an exponential cut-off power law.
 			\label{fig:G150SED}}
 	\end{centering}
 \end{figure}
