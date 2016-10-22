@@ -309,12 +309,24 @@ To infer the properties of the underlying relativistic particle populations in t
 To determine the best fit parameters, \nai{} calls \emc{} to sample the log-likelihood function (i.e., the likelihood of the observed data given the assumed spectrum) of the radiative model.\jamie{should I include what the likelihood function looks like here?} The radiative models require as input a particle distribution function to model the present-age electron or  proton spectrum. We used a one-zone, homogeneous particle distribution model (which \nai{} inherently assumes) and scaled the likelihood function by a uniform prior probability distribution. For this work, we model the separate proton and electron spectra as power laws with an exponential cut off,
 
 \begin{equation}\label{eq:ecpl}
-	{\rm \frac{dN}{dE}_{(e,p)} = A_{(e,p)} (E / E_0) ^{-s} \exp {\bigg ( }\frac{- E}{ E_{cutoff~(e,p)}}{\bigg)}}
+	{\rm \frac{dN}{dE}_{(e,p)} = A_{(e,p)} (E / E_0) ^{-s} \exp {\bigg ( }\frac{- E}{ E_{cutoff(e,p)}}{\bigg)}}
 \end{equation}
 
 where E is the particle energy, ${\rm E_0}$ the reference energy, s the spectral index, and ${\rm E_{cutoff}}$ the cutoff energy. The electron distribution's normalization is related to the proton normalization through the electron-to-proton ratio scaling factor, $A_e = K_{ep} A_p$. We also assumed that the electron and proton distributions have the same spectral shape. 
 
-For our radiation models, we fixed the ambient gas density and tested several values (as informed by the values determined in $\S$\ref{G150:Xray}) for proton-proton and bremsstrahlung interactions. For IC emission, we include a CMB, FIR, and NIR component.  \jamie{Talk about free/ fixed params of the model, reference the table, and figure to show best fit, discuss results and what the fits imply regarding lep/had dom and energy in e- p.}
+To better constrain our fit, we included the radio SED data for \Gone{}, provided in \cite{Gerbrandt14}, and simultaneously fit a  synchrotron and IC model (using the same underlying electron population) to both the GeV and radio data. For completeness, we also included the non-thermal X-ray upper flux limit (calculated  in $\S$ \ref{G150:Xray}), but we note that the high value of the upper limit does little to aid in constraining the location of the peak of synchrotron emission. For IC emission, we included CMB, FIR, and NIR components, with energy densities 0.261, 0.5, and 1 ${\rm eV~cm^{-3}}$ respectively. 
+
+In our model, we fixed the ambient gas density to the near-distance upper-limit determined value, ${\rm n_{H} = 0.018}$. We fit the proton and electron distribution's energy cutoffs (${\rm E_{cutoff~p}}$ and ${\rm E_{cutoff~e}}$), the proton distribution's normalization ($A_p$), and the magnetic field value; input for calculating the synchrotron spectrum. We performed several different fits, fixing the value of the electron-to-proton ratio to $K_{ep} = 0.01,~0.1,~1$, corresponding to a pion-decay dominated model (the value measure at earth \jamie{ref?}), a mixed leptonic/ hadronic model, and an IC dominated model  respectively. We also performed fits allowing the spectral index, s, to be fit, as well as fixing it to s = 1.5, 1.82, 2.0, corresponding to the value expected for IC dominated, our best-fit value for the $\gam$-ray spectral index ( see $\S$ \ref{G150:LATspec}), and that of a test-particle for a pion-decay dominate scenario.
+
+Something about doing several fits with the spectral index fit or fixed and fit with Kep fixed to various values
+
+tested several values (as informed by the values determined in $\S$\ref{G150:Xray}) for proton-proton and bremsstrahlung interactions.
+
+
+
+
+
+\jamie{Talk about free/ fixed params of the model, reference the table, and figure to show best fit, discuss results and what the fits imply regarding lep/had dom and energy in e- p.}
 
 \jamie{Used radio SED from \citep{Gerbrandt14}}
 
